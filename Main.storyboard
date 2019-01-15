@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="197" translatesAutoresizingMaskIntoConstraints="NO" image="TrapDesign.png">
+                                <rect key="frame" x="32" y="384" width="349" height="352"/>
+                                <constraints>
+                                    <constraint id="199" firstAttribute="height" constant="352"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Last" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="203" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="118" y="422" width="167" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0.027450980392156862" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="1053" firstAttribute="width" constant="167"/>
+                                    <constraint id="1057" firstAttribute="height" constant="20"/>
+                                </constraints>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="210" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="75.5" y="516" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="439" firstAttribute="width" constant="44"/>
+                                    <constraint id="440" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="211" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="117.5" y="538" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="443" firstAttribute="width" constant="44"/>
+                                    <constraint id="444" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="212" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="RedBoxTSS.png">
+                                <rect key="frame" x="160" y="1273" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="213" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="RedBoxTSS.png">
+                                <rect key="frame" x="160" y="1271" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="214" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="RedBoxTSS.png">
+                                <rect key="frame" x="160" y="1272" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="215" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="251.5" y="541" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="451" firstAttribute="width" constant="44"/>
+                                    <constraint id="452" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="227" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="292.5" y="516" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="455" firstAttribute="height" constant="44"/>
+                                    <constraint id="456" firstAttribute="width" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="436" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="182.5" y="554" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="447" firstAttribute="width" constant="44"/>
+                                    <constraint id="448" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="491" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="32" y="145" width="173" height="201"/>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0.027450980392156862" alpha="1"/>
+                                <state key="normal" title="Miss">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.10196078431372549" green="0" blue="0" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="Miss_Clicked:" destination="BYZ-38-t0r" id="493" eventType="touchUpInside"/>
+                                </connections>
+                                <state key="disabled" title="Miss"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="492" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="208" y="145" width="173" height="201"/>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.00784313725490196" green="1" blue="0" alpha="1"/>
+                                <state key="normal" title="Hit">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.10196078431372549" green="0" blue="0" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="Hit_Clicked:" destination="BYZ-38-t0r" id="494" eventType="touchUpInside"/>
+                                </connections>
+                                <state key="disabled" title="Hit"/>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maxValue="5" id="1051" translatesAutoresizingMaskIntoConstraints="NO" minValue="1">
+                                <rect key="frame" x="32" y="85" width="168" height="31"/>
+                                <constraints>
+                                    <constraint id="1063" firstAttribute="height" constant="30"/>
+                                    <constraint id="3451" firstAttribute="width" constant="164"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="Slider_Changed:" destination="BYZ-38-t0r" id="1367" eventType="valueChanged"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooters: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1052" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="32" y="56" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <constraints>
+                                    <constraint id="1062" firstAttribute="width" constant="168"/>
+                                </constraints>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2272" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="208" y="52" width="173" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Start"/>
+                                <constraints>
+                                    <constraint id="2277" firstAttribute="height" constant="30"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="Start_Clicked:" destination="BYZ-38-t0r" id="2282" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2273" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="208" y="85" width="173" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Pause"/>
+                                <state key="disabled" title="Pause"/>
+                                <constraints>
+                                    <constraint id="2281" firstAttribute="height" constant="30"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="Pause_Clicked:" destination="BYZ-38-t0r" id="2283" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="198" firstItem="197" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom"/>
+                            <constraint id="201" firstAttribute="trailingMargin" secondItem="197" secondAttribute="trailing" constant="13"/>
+                            <constraint id="202" firstItem="197" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12"/>
+                            <constraint id="437" firstItem="197" firstAttribute="centerX" secondItem="210" secondAttribute="leading" constant="131"/>
+                            <constraint id="438" firstItem="210" firstAttribute="bottom" secondItem="197" secondAttribute="top" constant="176"/>
+                            <constraint id="441" firstItem="211" firstAttribute="top" secondItem="210" secondAttribute="top" constant="22"/>
+                            <constraint id="442" firstItem="210" firstAttribute="trailing" secondItem="211" secondAttribute="leading" constant="2"/>
+                            <constraint id="445" firstItem="436" firstAttribute="leading" secondItem="211" secondAttribute="trailing" constant="21"/>
+                            <constraint id="446" firstItem="436" firstAttribute="top" secondItem="211" secondAttribute="top" constant="16"/>
+                            <constraint id="449" firstItem="215" firstAttribute="leading" secondItem="436" secondAttribute="trailing" constant="25"/>
+                            <constraint id="450" firstItem="436" firstAttribute="top" secondItem="215" secondAttribute="top" constant="13"/>
+                            <constraint id="453" firstItem="215" firstAttribute="trailing" secondItem="227" secondAttribute="leading" constant="3"/>
+                            <constraint id="454" firstItem="215" firstAttribute="top" secondItem="227" secondAttribute="top" constant="25"/>
+                            <constraint id="761" firstItem="491" firstAttribute="leading" secondItem="197" secondAttribute="leading"/>
+                            <constraint id="762" firstItem="197" firstAttribute="top" secondItem="491" secondAttribute="bottom" constant="38"/>
+                            <constraint id="763" firstItem="197" firstAttribute="top" secondItem="492" secondAttribute="bottom" constant="38"/>
+                            <constraint id="764" firstItem="492" firstAttribute="trailing" secondItem="197" secondAttribute="trailing"/>
+                            <constraint id="765" firstItem="492" firstAttribute="leading" secondItem="197" secondAttribute="centerX" constant="1"/>
+                            <constraint id="766" firstItem="197" firstAttribute="centerX" secondItem="491" secondAttribute="trailing" constant="1"/>
+                            <constraint id="1055" firstItem="203" firstAttribute="top" secondItem="197" secondAttribute="top" constant="38"/>
+                            <constraint id="1060" firstItem="1051" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65"/>
+                            <constraint id="1061" firstItem="1052" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36"/>
+                            <constraint id="1065" firstItem="1051" firstAttribute="leading" secondItem="491" secondAttribute="leading" constant="2"/>
+                            <constraint id="1066" firstItem="1051" firstAttribute="leading" secondItem="1052" secondAttribute="leading" constant="2"/>
+                            <constraint id="2274" firstItem="1052" firstAttribute="top" secondItem="2272" secondAttribute="top" constant="4"/>
+                            <constraint id="2275" firstItem="2272" firstAttribute="leading" secondItem="1051" secondAttribute="trailing" constant="10"/>
+                            <constraint id="2278" firstItem="2273" firstAttribute="leading" secondItem="1051" secondAttribute="trailing" constant="10"/>
+                            <constraint id="2279" firstItem="2273" firstAttribute="top" secondItem="2272" secondAttribute="bottom" constant="3"/>
+                            <constraint id="2865" firstItem="492" firstAttribute="top" secondItem="2273" secondAttribute="bottom" constant="30"/>
+                            <constraint id="2866" firstItem="491" firstAttribute="top" secondItem="2273" secondAttribute="bottom" constant="30"/>
+                            <constraint id="3448" firstItem="197" firstAttribute="centerX" secondItem="203" secondAttribute="centerX" constant="5"/>
+                            <constraint id="3449" firstItem="2272" firstAttribute="trailing" secondItem="492" secondAttribute="trailing"/>
+                            <constraint id="3450" firstItem="2273" firstAttribute="trailing" secondItem="492" secondAttribute="trailing"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ShooterNameLabel" destination="203" id="name-outlet-203"/>
+                        <outlet property="RedBox1" destination="210" id="name-outlet-210"/>
+                        <outlet property="RedBox2" destination="211" id="name-outlet-211"/>
+                        <outlet property="RedBox4" destination="215" id="name-outlet-215"/>
+                        <outlet property="RedBox3" destination="436" id="name-outlet-436"/>
+                        <outlet property="RedBox5" destination="227" id="name-outlet-227"/>
+                        <outlet property="MissButton" destination="491" id="name-outlet-491"/>
+                        <outlet property="HitButton" destination="492" id="name-outlet-492"/>
+                        <outlet property="NumberOfShooterSlider" destination="1051" id="name-outlet-1051"/>
+                        <outlet property="NumShootersLabel" destination="1052" id="name-outlet-1052"/>
+                        <outlet property="StartButton" destination="2272" id="name-outlet-2272"/>
+                        <outlet property="PauseButton" destination="2273" id="name-outlet-2273"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TrapDesign.png" width="216" height="216"/>
+        <image name="RedBoxTSS.png" width="36" height="36"/>
+    </resources>
+</document>
