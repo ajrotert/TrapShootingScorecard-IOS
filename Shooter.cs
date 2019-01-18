@@ -11,7 +11,7 @@ namespace AR.TrapScorecard
         public string Name
         {
             get { return _name; }
-            private set { _name = value; }
+            set { _name = value; }
         }
 
         public int shot = 0;

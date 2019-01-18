@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3879">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="197" translatesAutoresizingMaskIntoConstraints="NO" image="TrapDesign.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="197" translatesAutoresizingMaskIntoConstraints="NO" image="TrapDesignMap.png">
                                 <rect key="frame" x="32" y="384" width="349" height="352"/>
                                 <constraints>
                                     <constraint id="199" firstAttribute="height" constant="352"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Last" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="203" translatesAutoresizingMaskIntoConstraints="NO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trap Scorecard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="203" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="118" y="422" width="167" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0.027450980392156862" alpha="1"/>
@@ -84,72 +84,78 @@
                                     <constraint id="448" firstAttribute="height" constant="44"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="491" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="32" y="145" width="173" height="201"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="491" translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" enabled="NO">
+                                <rect key="frame" x="30" y="160" width="173.5" height="201"/>
                                 <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="32"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0.027450980392156862" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.25882352941176473" blue="0.2196078431372549" alpha="1"/>
                                 <state key="normal" title="Miss">
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.10196078431372549" green="0" blue="0" alpha="1"/>
                                 </state>
                                 <connections>
                                     <action selector="Miss_Clicked:" destination="BYZ-38-t0r" id="493" eventType="touchUpInside"/>
+                                    <segue id="16764" destination="15464" kind="show" identifier="SegueToResults2"/>
                                 </connections>
-                                <state key="disabled" title="Miss"/>
+                                <state key="disabled" title="Miss">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="492" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="208" y="145" width="173" height="201"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="492" translatesAutoresizingMaskIntoConstraints="NO" enabled="NO">
+                                <rect key="frame" x="207.5" y="160" width="173.5" height="201"/>
                                 <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="32"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.00784313725490196" green="1" blue="0" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.36078431372549019" green="1" blue="0.31764705882352939" alpha="1"/>
                                 <state key="normal" title="Hit">
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.10196078431372549" green="0" blue="0" alpha="1"/>
                                 </state>
                                 <connections>
                                     <action selector="Hit_Clicked:" destination="BYZ-38-t0r" id="494" eventType="touchUpInside"/>
+                                    <segue id="16946" destination="15464" kind="show" identifier="SegueToResults"/>
                                 </connections>
-                                <state key="disabled" title="Hit"/>
+                                <state key="disabled" title="Hit">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maxValue="5" id="1051" translatesAutoresizingMaskIntoConstraints="NO" minValue="1">
-                                <rect key="frame" x="32" y="85" width="168" height="31"/>
-                                <constraints>
-                                    <constraint id="1063" firstAttribute="height" constant="30"/>
-                                    <constraint id="3451" firstAttribute="width" constant="164"/>
-                                </constraints>
+                                <rect key="frame" x="32" y="109" width="168.5" height="31"/>
                                 <connections>
                                     <action selector="Slider_Changed:" destination="BYZ-38-t0r" id="1367" eventType="valueChanged"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="4102" firstAttribute="height" constant="30"/>
+                                </constraints>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooters: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1052" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="32" y="56" width="168" height="21"/>
+                                <rect key="frame" x="32" y="83" width="168.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <constraints>
-                                    <constraint id="1062" firstAttribute="width" constant="168"/>
+                                    <constraint id="4097" firstAttribute="height" constant="21"/>
                                 </constraints>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2272" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="208" y="52" width="173" height="30"/>
+                                <rect key="frame" x="207.5" y="77" width="173.5" height="30"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Start"/>
-                                <constraints>
-                                    <constraint id="2277" firstAttribute="height" constant="30"/>
-                                </constraints>
                                 <connections>
                                     <action selector="Start_Clicked:" destination="BYZ-38-t0r" id="2282" eventType="touchUpInside"/>
+                                    <segue id="5225" destination="5123" kind="show" identifier="SegueToNames"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="4103" firstAttribute="height" constant="30"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2273" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="208" y="85" width="173" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2273" translatesAutoresizingMaskIntoConstraints="NO" enabled="NO">
+                                <rect key="frame" x="207.5" y="110" width="173.5" height="30"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Pause"/>
                                 <state key="disabled" title="Pause"/>
-                                <constraints>
-                                    <constraint id="2281" firstAttribute="height" constant="30"/>
-                                </constraints>
                                 <connections>
                                     <action selector="Pause_Clicked:" destination="BYZ-38-t0r" id="2283" eventType="touchUpInside"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="4118" firstAttribute="height" constant="30"/>
+                                </constraints>
                             </button>
                         </subviews>
                         <constraints>
@@ -166,26 +172,28 @@
                             <constraint id="450" firstItem="436" firstAttribute="top" secondItem="215" secondAttribute="top" constant="13"/>
                             <constraint id="453" firstItem="215" firstAttribute="trailing" secondItem="227" secondAttribute="leading" constant="3"/>
                             <constraint id="454" firstItem="215" firstAttribute="top" secondItem="227" secondAttribute="top" constant="25"/>
-                            <constraint id="761" firstItem="491" firstAttribute="leading" secondItem="197" secondAttribute="leading"/>
-                            <constraint id="762" firstItem="197" firstAttribute="top" secondItem="491" secondAttribute="bottom" constant="38"/>
-                            <constraint id="763" firstItem="197" firstAttribute="top" secondItem="492" secondAttribute="bottom" constant="38"/>
-                            <constraint id="764" firstItem="492" firstAttribute="trailing" secondItem="197" secondAttribute="trailing"/>
-                            <constraint id="765" firstItem="492" firstAttribute="leading" secondItem="197" secondAttribute="centerX" constant="1"/>
-                            <constraint id="766" firstItem="197" firstAttribute="centerX" secondItem="491" secondAttribute="trailing" constant="1"/>
                             <constraint id="1055" firstItem="203" firstAttribute="top" secondItem="197" secondAttribute="top" constant="38"/>
-                            <constraint id="1060" firstItem="1051" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65"/>
-                            <constraint id="1061" firstItem="1052" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36"/>
-                            <constraint id="1065" firstItem="1051" firstAttribute="leading" secondItem="491" secondAttribute="leading" constant="2"/>
-                            <constraint id="1066" firstItem="1051" firstAttribute="leading" secondItem="1052" secondAttribute="leading" constant="2"/>
-                            <constraint id="2274" firstItem="1052" firstAttribute="top" secondItem="2272" secondAttribute="top" constant="4"/>
-                            <constraint id="2275" firstItem="2272" firstAttribute="leading" secondItem="1051" secondAttribute="trailing" constant="10"/>
-                            <constraint id="2278" firstItem="2273" firstAttribute="leading" secondItem="1051" secondAttribute="trailing" constant="10"/>
-                            <constraint id="2279" firstItem="2273" firstAttribute="top" secondItem="2272" secondAttribute="bottom" constant="3"/>
-                            <constraint id="2865" firstItem="492" firstAttribute="top" secondItem="2273" secondAttribute="bottom" constant="30"/>
-                            <constraint id="2866" firstItem="491" firstAttribute="top" secondItem="2273" secondAttribute="bottom" constant="30"/>
                             <constraint id="3448" firstItem="197" firstAttribute="centerX" secondItem="203" secondAttribute="centerX" constant="5"/>
-                            <constraint id="3449" firstItem="2272" firstAttribute="trailing" secondItem="492" secondAttribute="trailing"/>
-                            <constraint id="3450" firstItem="2273" firstAttribute="trailing" secondItem="492" secondAttribute="trailing"/>
+                            <constraint id="4093" firstItem="1052" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13"/>
+                            <constraint id="4095" firstItem="1052" firstAttribute="leading" secondItem="491" secondAttribute="leading" constant="2"/>
+                            <constraint id="4098" firstItem="491" firstAttribute="trailing" secondItem="1052" secondAttribute="trailing" constant="3"/>
+                            <constraint id="4099" firstItem="1051" firstAttribute="leading" secondItem="491" secondAttribute="leading" constant="4"/>
+                            <constraint id="4100" firstItem="491" firstAttribute="trailing" secondItem="1051" secondAttribute="trailing" constant="5"/>
+                            <constraint id="4101" firstItem="1051" firstAttribute="top" secondItem="1052" secondAttribute="bottom" constant="5"/>
+                            <constraint id="4104" firstItem="2272" firstAttribute="trailing" secondItem="492" secondAttribute="trailing"/>
+                            <constraint id="4105" firstItem="2272" firstAttribute="leading" secondItem="492" secondAttribute="leading"/>
+                            <constraint id="4106" firstItem="2272" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="7"/>
+                            <constraint id="4107" firstItem="2273" firstAttribute="top" secondItem="2272" secondAttribute="bottom" constant="3"/>
+                            <constraint id="4108" firstItem="2273" firstAttribute="leading" secondItem="492" secondAttribute="leading"/>
+                            <constraint id="4109" firstItem="2273" firstAttribute="trailing" secondItem="492" secondAttribute="trailing"/>
+                            <constraint id="4110" firstItem="491" firstAttribute="top" secondItem="1051" secondAttribute="bottom" constant="21"/>
+                            <constraint id="4111" firstItem="491" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10"/>
+                            <constraint id="4113" firstItem="197" firstAttribute="top" secondItem="491" secondAttribute="bottom" constant="23"/>
+                            <constraint id="4114" firstItem="492" firstAttribute="top" secondItem="1051" secondAttribute="bottom" constant="21"/>
+                            <constraint id="4115" firstAttribute="trailingMargin" secondItem="492" secondAttribute="trailing" constant="13"/>
+                            <constraint id="4116" firstItem="197" firstAttribute="top" secondItem="492" secondAttribute="bottom" constant="23"/>
+                            <constraint id="4790" firstItem="492" firstAttribute="leading" secondItem="197" secondAttribute="centerX" constant="1"/>
+                            <constraint id="4791" firstItem="197" firstAttribute="centerX" secondItem="491" secondAttribute="trailing" constant="3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -201,15 +209,1624 @@
                         <outlet property="NumShootersLabel" destination="1052" id="name-outlet-1052"/>
                         <outlet property="StartButton" destination="2272" id="name-outlet-2272"/>
                         <outlet property="PauseButton" destination="2273" id="name-outlet-2273"/>
+                        <outlet property="TrapMapIV" destination="197" id="name-outlet-197"/>
                     </connections>
+                    <navigationItem title="Trap Shooting Scorecard" id="4084" key="navigationItem"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO" barStyle="black"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="1120" y="-23"/>
+        </scene>
+        <scene sceneID="3878">
+            <objects>
+                <navigationController id="3879" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3881">
+                        <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="4085" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3882" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="-17"/>
+        </scene>
+        <scene sceneID="5122">
+            <objects>
+                <viewController id="5123" sceneMemberID="viewController" customClass="SNameController" title="Shooter Names">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5120"/>
+                        <viewControllerLayoutGuide type="bottom" id="5121"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5124">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.61960784313725492" green="0.62352941176470589" blue="0.61960784313725492" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9607" translatesAutoresizingMaskIntoConstraints="NO" image="TrapDesignMap.png">
+                                <rect key="frame" x="32" y="384" width="349" height="352"/>
+                                <constraints>
+                                    <constraint id="9608" firstAttribute="height" constant="352"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trap Scorecard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9604" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="118" y="422" width="167" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0.027450980392156862" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="9605" firstAttribute="width" constant="167"/>
+                                    <constraint id="9606" firstAttribute="height" constant="20"/>
+                                </constraints>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9609" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="292.5" y="516" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="9610" firstAttribute="height" constant="44"/>
+                                    <constraint id="9611" firstAttribute="width" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9612" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="251.5" y="541" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="9613" firstAttribute="width" constant="44"/>
+                                    <constraint id="9614" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9615" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="182.5" y="554" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="9616" firstAttribute="width" constant="44"/>
+                                    <constraint id="9617" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9618" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="117.5" y="538" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="9619" firstAttribute="width" constant="44"/>
+                                    <constraint id="9620" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9621" translatesAutoresizingMaskIntoConstraints="NO" image="RedBoxTSS.png">
+                                <rect key="frame" x="75.5" y="516" width="44" height="44"/>
+                                <constraints>
+                                    <constraint id="9622" firstAttribute="width" constant="44"/>
+                                    <constraint id="9623" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="9641" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Shooter 1" clearsOnBeginEditing="YES" clearButtonMode="whileEditing">
+                                <rect key="frame" x="32" y="106" width="349" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Shooter1_Changed:" destination="5123" id="11668" eventType="valueChanged"/>
+                                    <action selector="Shooter1_Changed:" destination="5123" id="12149" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="9642" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Shooter 2" clearButtonMode="whileEditing" clearsOnBeginEditing="YES">
+                                <rect key="frame" x="32" y="156" width="349" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Shooter2_Changed:" destination="5123" id="11669" eventType="valueChanged"/>
+                                    <action selector="Shooter2_Changed:" destination="5123" id="14978" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="9643" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Shooter 3" clearButtonMode="whileEditing" clearsOnBeginEditing="YES">
+                                <rect key="frame" x="32" y="206" width="349" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Shooter3_Changed:" destination="5123" id="11670" eventType="valueChanged"/>
+                                    <action selector="Shooter3_Changed:" destination="5123" id="14979" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="9644" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Shooter 4" clearButtonMode="whileEditing" clearsOnBeginEditing="YES">
+                                <rect key="frame" x="32" y="256" width="349" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Shooter4_Changed:" destination="5123" id="11671" eventType="valueChanged"/>
+                                    <action selector="Shooter4_Changed:" destination="5123" id="14980" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="9645" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Shooter 5" clearButtonMode="whileEditing" clearsOnBeginEditing="YES">
+                                <rect key="frame" x="32" y="306" width="349" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Shooter5_Changed:" destination="5123" id="11672" eventType="valueChanged"/>
+                                    <action selector="Shooter5_Changed:" destination="5123" id="14981" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10483" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="82.5" y="528" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18" weight="black"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="10485" firstAttribute="width" constant="29"/>
+                                    <constraint id="10486" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10490" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="123.5" y="549" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18" weight="black"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="10491" firstAttribute="width" constant="29"/>
+                                    <constraint id="10492" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10497" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="189.5" y="566" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18" weight="black"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="10498" firstAttribute="width" constant="29"/>
+                                    <constraint id="10499" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10504" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="258.5" y="552" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18" weight="black"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="10505" firstAttribute="width" constant="29"/>
+                                    <constraint id="10506" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10513" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="299.5" y="527" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18" weight="black"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="10514" firstAttribute="width" constant="29"/>
+                                    <constraint id="10515" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="9624" firstItem="9607" firstAttribute="bottom" secondItem="5124" secondAttribute="bottom"/>
+                            <constraint id="9625" firstItem="9607" firstAttribute="leading" secondItem="5124" secondAttribute="leadingMargin" constant="12"/>
+                            <constraint id="9626" firstAttribute="trailingMargin" secondItem="9607" secondAttribute="trailing" constant="13"/>
+                            <constraint id="9627" firstItem="9607" firstAttribute="centerX" secondItem="9621" secondAttribute="leading" constant="131"/>
+                            <constraint id="9628" firstItem="9621" firstAttribute="top" secondItem="9607" secondAttribute="top" constant="132"/>
+                            <constraint id="9629" firstItem="9621" firstAttribute="trailing" secondItem="9618" secondAttribute="leading" constant="2"/>
+                            <constraint id="9630" firstItem="9618" firstAttribute="top" secondItem="9621" secondAttribute="top" constant="22"/>
+                            <constraint id="9631" firstItem="9615" firstAttribute="leading" secondItem="9618" secondAttribute="trailing" constant="21"/>
+                            <constraint id="9632" firstItem="9615" firstAttribute="top" secondItem="9618" secondAttribute="top" constant="16"/>
+                            <constraint id="9633" firstItem="9612" firstAttribute="leading" secondItem="9615" secondAttribute="trailing" constant="25"/>
+                            <constraint id="9634" firstItem="9615" firstAttribute="top" secondItem="9612" secondAttribute="top" constant="13"/>
+                            <constraint id="9635" firstItem="9612" firstAttribute="trailing" secondItem="9609" secondAttribute="leading" constant="3"/>
+                            <constraint id="9636" firstItem="9612" firstAttribute="top" secondItem="9609" secondAttribute="top" constant="25"/>
+                            <constraint id="9639" firstItem="9604" firstAttribute="top" secondItem="9607" secondAttribute="top" constant="38"/>
+                            <constraint id="9640" firstItem="9607" firstAttribute="centerX" secondItem="9604" secondAttribute="centerX" constant="5"/>
+                            <constraint id="10042" firstItem="9641" firstAttribute="top" secondItem="5120" secondAttribute="bottom" constant="36"/>
+                            <constraint id="10043" firstItem="9642" firstAttribute="top" secondItem="9641" secondAttribute="bottom" constant="20"/>
+                            <constraint id="10044" firstItem="9643" firstAttribute="top" secondItem="9642" secondAttribute="bottom" constant="20"/>
+                            <constraint id="10045" firstItem="9644" firstAttribute="top" secondItem="9643" secondAttribute="bottom" constant="20"/>
+                            <constraint id="10046" firstItem="9645" firstAttribute="top" secondItem="9644" secondAttribute="bottom" constant="20"/>
+                            <constraint id="10047" firstItem="9641" firstAttribute="leading" secondItem="5124" secondAttribute="leadingMargin" constant="12"/>
+                            <constraint id="10048" firstAttribute="trailingMargin" secondItem="9641" secondAttribute="trailing" constant="13"/>
+                            <constraint id="10049" firstItem="9642" firstAttribute="leading" secondItem="5124" secondAttribute="leadingMargin" constant="12"/>
+                            <constraint id="10050" firstAttribute="trailingMargin" secondItem="9642" secondAttribute="trailing" constant="13"/>
+                            <constraint id="10051" firstItem="9643" firstAttribute="leading" secondItem="5124" secondAttribute="leadingMargin" constant="12"/>
+                            <constraint id="10052" firstAttribute="trailingMargin" secondItem="9643" secondAttribute="trailing" constant="13"/>
+                            <constraint id="10053" firstItem="9644" firstAttribute="leading" secondItem="5124" secondAttribute="leadingMargin" constant="12"/>
+                            <constraint id="10054" firstAttribute="trailingMargin" secondItem="9644" secondAttribute="trailing" constant="13"/>
+                            <constraint id="10055" firstItem="9645" firstAttribute="leading" secondItem="5124" secondAttribute="leadingMargin" constant="12"/>
+                            <constraint id="10056" firstAttribute="trailingMargin" secondItem="9645" secondAttribute="trailing" constant="13"/>
+                            <constraint id="10484" firstItem="10483" firstAttribute="top" secondItem="9621" secondAttribute="top" constant="12"/>
+                            <constraint id="10487" firstItem="10483" firstAttribute="leading" secondItem="9621" secondAttribute="leading" constant="7"/>
+                            <constraint id="10495" firstItem="10490" firstAttribute="top" secondItem="9618" secondAttribute="top" constant="11"/>
+                            <constraint id="10496" firstItem="10490" firstAttribute="leading" secondItem="9618" secondAttribute="leading" constant="6"/>
+                            <constraint id="10502" firstItem="10497" firstAttribute="top" secondItem="9615" secondAttribute="top" constant="12"/>
+                            <constraint id="10503" firstItem="10497" firstAttribute="leading" secondItem="9615" secondAttribute="leading" constant="7"/>
+                            <constraint id="10511" firstItem="10504" firstAttribute="top" secondItem="9612" secondAttribute="top" constant="11"/>
+                            <constraint id="10512" firstItem="10504" firstAttribute="leading" secondItem="9612" secondAttribute="leading" constant="7"/>
+                            <constraint id="10518" firstItem="10513" firstAttribute="top" secondItem="9609" secondAttribute="top" constant="11"/>
+                            <constraint id="10519" firstItem="10513" firstAttribute="leading" secondItem="9609" secondAttribute="leading" constant="7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ShooterTextBox1" destination="9641" id="name-outlet-9641"/>
+                        <outlet property="ShooterTextBox2" destination="9642" id="name-outlet-9642"/>
+                        <outlet property="ShooterTextBox3" destination="9643" id="name-outlet-9643"/>
+                        <outlet property="ShooterTextBox4" destination="9644" id="name-outlet-9644"/>
+                        <outlet property="ShooterTextBox5" destination="9645" id="name-outlet-9645"/>
+                        <outlet property="OneLabel" destination="10483" id="name-outlet-10483"/>
+                        <outlet property="TwoLabel" destination="10490" id="name-outlet-10490"/>
+                        <outlet property="ThreeLabel" destination="10497" id="name-outlet-10497"/>
+                        <outlet property="FourLabel" destination="10504" id="name-outlet-10504"/>
+                        <outlet property="FiveLabel" destination="10513" id="name-outlet-10513"/>
+                    </connections>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5125" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="-118"/>
+        </scene>
+        <scene sceneID="15463">
+            <objects>
+                <viewController id="15464" sceneMemberID="viewController" customClass="ResultsController" storyboardIdentifier="ResultsController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Results">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="15461"/>
+                        <viewControllerLayoutGuide type="bottom" id="15462"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="15465">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.61960784313725492" green="0.62352941176470589" blue="0.61960784313725492" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="21945" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24319" firstAttribute="height" constant="26"/>
+                                    <constraint id="24320" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="21946" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24323" firstAttribute="height" constant="26"/>
+                                    <constraint id="24324" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="21947" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24327" firstAttribute="height" constant="26"/>
+                                    <constraint id="24328" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooter 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="21948" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="90" width="130" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="21954" firstAttribute="height" constant="28"/>
+                                    <constraint id="24898" firstAttribute="width" constant="130"/>
+                                </constraints>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="21949" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24331" firstAttribute="width" constant="26"/>
+                                    <constraint id="24332" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="21950" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24335" firstAttribute="width" constant="26"/>
+                                    <constraint id="24336" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22166" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="147" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24339" firstAttribute="height" constant="26"/>
+                                    <constraint id="24340" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22167" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="147" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24343" firstAttribute="width" constant="26"/>
+                                    <constraint id="24344" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22168" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="147" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24347" firstAttribute="width" constant="26"/>
+                                    <constraint id="24348" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22169" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="147" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24351" firstAttribute="height" constant="26"/>
+                                    <constraint id="24352" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22170" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="147" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24355" firstAttribute="width" constant="26"/>
+                                    <constraint id="24356" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22176" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="173" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24548" firstAttribute="width" constant="26"/>
+                                    <constraint id="24549" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22177" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="173" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24552" firstAttribute="height" constant="26"/>
+                                    <constraint id="24553" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22178" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="173" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24556" firstAttribute="height" constant="26"/>
+                                    <constraint id="24557" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22179" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="173" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24560" firstAttribute="width" constant="26"/>
+                                    <constraint id="24561" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="22180" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="173" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24564" firstAttribute="width" constant="26"/>
+                                    <constraint id="24565" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24307" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="199" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24568" firstAttribute="height" constant="26"/>
+                                    <constraint id="24569" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24308" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="199" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24572" firstAttribute="height" constant="26"/>
+                                    <constraint id="24573" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24309" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="199" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24576" firstAttribute="height" constant="26"/>
+                                    <constraint id="24577" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24310" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="199" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24580" firstAttribute="width" constant="26"/>
+                                    <constraint id="24581" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24311" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="199" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24584" firstAttribute="width" constant="26"/>
+                                    <constraint id="24585" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24312" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="224" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24588" firstAttribute="width" constant="26"/>
+                                    <constraint id="24589" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24313" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="224" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24592" firstAttribute="height" constant="26"/>
+                                    <constraint id="24593" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24314" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="224" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24596" firstAttribute="height" constant="26"/>
+                                    <constraint id="24597" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24315" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="224" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24600" firstAttribute="height" constant="26"/>
+                                    <constraint id="24601" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24316" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="224" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24604" firstAttribute="width" constant="26"/>
+                                    <constraint id="24605" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24658" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="223" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24659" firstAttribute="width" constant="26"/>
+                                    <constraint id="24660" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24661" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="223" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24662" firstAttribute="height" constant="26"/>
+                                    <constraint id="24663" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24664" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="223" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24665" firstAttribute="height" constant="26"/>
+                                    <constraint id="24666" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24667" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="223" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24668" firstAttribute="height" constant="26"/>
+                                    <constraint id="24669" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24670" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="223" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24671" firstAttribute="width" constant="26"/>
+                                    <constraint id="24672" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24673" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="198" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24674" firstAttribute="height" constant="26"/>
+                                    <constraint id="24675" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24676" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="198" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24677" firstAttribute="height" constant="26"/>
+                                    <constraint id="24678" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24679" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="198" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24680" firstAttribute="height" constant="26"/>
+                                    <constraint id="24681" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24682" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="198" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24683" firstAttribute="width" constant="26"/>
+                                    <constraint id="24684" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24685" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="198" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24686" firstAttribute="width" constant="26"/>
+                                    <constraint id="24687" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24688" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="172" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24689" firstAttribute="width" constant="26"/>
+                                    <constraint id="24690" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24691" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="172" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24692" firstAttribute="width" constant="26"/>
+                                    <constraint id="24693" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24694" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="172" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24695" firstAttribute="height" constant="26"/>
+                                    <constraint id="24696" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24697" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="172" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24698" firstAttribute="height" constant="26"/>
+                                    <constraint id="24699" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24700" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="172" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24701" firstAttribute="width" constant="26"/>
+                                    <constraint id="24702" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24703" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="146" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24704" firstAttribute="height" constant="26"/>
+                                    <constraint id="24705" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24706" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="146" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24707" firstAttribute="width" constant="26"/>
+                                    <constraint id="24708" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24709" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="146" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24710" firstAttribute="width" constant="26"/>
+                                    <constraint id="24711" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24712" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="146" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24713" firstAttribute="height" constant="26"/>
+                                    <constraint id="24714" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24715" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="146" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24716" firstAttribute="width" constant="26"/>
+                                    <constraint id="24717" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24718" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24719" firstAttribute="width" constant="26"/>
+                                    <constraint id="24720" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24721" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24722" firstAttribute="width" constant="26"/>
+                                    <constraint id="24723" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24724" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24725" firstAttribute="height" constant="26"/>
+                                    <constraint id="24726" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24727" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24728" firstAttribute="height" constant="26"/>
+                                    <constraint id="24729" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="24730" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="121" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="24731" firstAttribute="height" constant="26"/>
+                                    <constraint id="24732" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooter 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="24733" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="90" width="130" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="24735" firstAttribute="height" constant="28"/>
+                                    <constraint id="24899" firstAttribute="width" constant="130"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooter 3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="25659" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="257" width="130" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="25660" firstAttribute="height" constant="28"/>
+                                    <constraint id="25661" firstAttribute="width" constant="130"/>
+                                </constraints>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25662" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25663" firstAttribute="height" constant="26"/>
+                                    <constraint id="25664" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25665" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25666" firstAttribute="height" constant="26"/>
+                                    <constraint id="25667" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25668" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25669" firstAttribute="height" constant="26"/>
+                                    <constraint id="25670" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25671" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25672" firstAttribute="width" constant="26"/>
+                                    <constraint id="25673" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25674" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25675" firstAttribute="width" constant="26"/>
+                                    <constraint id="25676" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25677" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25678" firstAttribute="height" constant="26"/>
+                                    <constraint id="25679" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25680" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25681" firstAttribute="width" constant="26"/>
+                                    <constraint id="25682" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25683" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25684" firstAttribute="width" constant="26"/>
+                                    <constraint id="25685" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25686" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25687" firstAttribute="height" constant="26"/>
+                                    <constraint id="25688" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25689" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25690" firstAttribute="width" constant="26"/>
+                                    <constraint id="25691" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25692" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25693" firstAttribute="width" constant="26"/>
+                                    <constraint id="25694" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25695" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25696" firstAttribute="height" constant="26"/>
+                                    <constraint id="25697" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25698" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25699" firstAttribute="height" constant="26"/>
+                                    <constraint id="25700" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25701" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25702" firstAttribute="width" constant="26"/>
+                                    <constraint id="25703" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25704" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25705" firstAttribute="width" constant="26"/>
+                                    <constraint id="25706" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25707" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25708" firstAttribute="height" constant="26"/>
+                                    <constraint id="25709" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25710" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25711" firstAttribute="height" constant="26"/>
+                                    <constraint id="25712" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25713" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25714" firstAttribute="height" constant="26"/>
+                                    <constraint id="25715" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25716" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25717" firstAttribute="width" constant="26"/>
+                                    <constraint id="25718" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25719" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25720" firstAttribute="width" constant="26"/>
+                                    <constraint id="25721" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25722" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25723" firstAttribute="width" constant="26"/>
+                                    <constraint id="25724" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25725" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25726" firstAttribute="height" constant="26"/>
+                                    <constraint id="25727" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25728" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25729" firstAttribute="height" constant="26"/>
+                                    <constraint id="25730" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25731" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25732" firstAttribute="height" constant="26"/>
+                                    <constraint id="25733" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="25734" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="25735" firstAttribute="width" constant="26"/>
+                                    <constraint id="25736" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26486" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26487" firstAttribute="width" constant="26"/>
+                                    <constraint id="26488" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26489" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26490" firstAttribute="height" constant="26"/>
+                                    <constraint id="26491" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26492" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26493" firstAttribute="height" constant="26"/>
+                                    <constraint id="26494" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26495" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26496" firstAttribute="height" constant="26"/>
+                                    <constraint id="26497" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26498" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="388" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26499" firstAttribute="width" constant="26"/>
+                                    <constraint id="26500" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26501" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26502" firstAttribute="height" constant="26"/>
+                                    <constraint id="26503" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26504" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26505" firstAttribute="height" constant="26"/>
+                                    <constraint id="26506" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26507" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26508" firstAttribute="height" constant="26"/>
+                                    <constraint id="26509" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26510" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26511" firstAttribute="width" constant="26"/>
+                                    <constraint id="26512" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26513" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="365" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26514" firstAttribute="width" constant="26"/>
+                                    <constraint id="26515" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26516" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26517" firstAttribute="width" constant="26"/>
+                                    <constraint id="26518" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26519" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26520" firstAttribute="width" constant="26"/>
+                                    <constraint id="26521" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26522" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26523" firstAttribute="height" constant="26"/>
+                                    <constraint id="26524" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26525" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26526" firstAttribute="height" constant="26"/>
+                                    <constraint id="26527" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26528" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="339" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26529" firstAttribute="width" constant="26"/>
+                                    <constraint id="26530" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26531" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26532" firstAttribute="height" constant="26"/>
+                                    <constraint id="26533" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26534" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26535" firstAttribute="width" constant="26"/>
+                                    <constraint id="26536" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26537" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26538" firstAttribute="width" constant="26"/>
+                                    <constraint id="26539" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26540" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26541" firstAttribute="height" constant="26"/>
+                                    <constraint id="26542" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26543" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="314" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26544" firstAttribute="width" constant="26"/>
+                                    <constraint id="26545" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26546" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="368" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26547" firstAttribute="width" constant="26"/>
+                                    <constraint id="26548" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26549" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26550" firstAttribute="width" constant="26"/>
+                                    <constraint id="26551" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26552" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="316" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26553" firstAttribute="height" constant="26"/>
+                                    <constraint id="26554" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26555" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="290" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26556" firstAttribute="height" constant="26"/>
+                                    <constraint id="26557" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="26558" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="289" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="26559" firstAttribute="height" constant="26"/>
+                                    <constraint id="26560" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooter 4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26561" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="264" y="257" width="130" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="26562" firstAttribute="height" constant="28"/>
+                                    <constraint id="26563" firstAttribute="width" constant="130"/>
+                                </constraints>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27305" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="556" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27306" firstAttribute="width" constant="26"/>
+                                    <constraint id="27307" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27308" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="556" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27309" firstAttribute="height" constant="26"/>
+                                    <constraint id="27310" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27311" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="556" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27312" firstAttribute="height" constant="26"/>
+                                    <constraint id="27313" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27314" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="556" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27315" firstAttribute="height" constant="26"/>
+                                    <constraint id="27316" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27317" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="556" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27318" firstAttribute="width" constant="26"/>
+                                    <constraint id="27319" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27320" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="530" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27321" firstAttribute="width" constant="26"/>
+                                    <constraint id="27322" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27323" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="530" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27324" firstAttribute="width" constant="26"/>
+                                    <constraint id="27325" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27326" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="530" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27327" firstAttribute="height" constant="26"/>
+                                    <constraint id="27328" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27329" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="530" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27330" firstAttribute="height" constant="26"/>
+                                    <constraint id="27331" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27332" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="530" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27333" firstAttribute="height" constant="26"/>
+                                    <constraint id="27334" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27335" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="504" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27336" firstAttribute="width" constant="26"/>
+                                    <constraint id="27337" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27338" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="504" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27339" firstAttribute="height" constant="26"/>
+                                    <constraint id="27340" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27341" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="504" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27342" firstAttribute="height" constant="26"/>
+                                    <constraint id="27343" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27344" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="504" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27345" firstAttribute="width" constant="26"/>
+                                    <constraint id="27346" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27347" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="504" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27348" firstAttribute="width" constant="26"/>
+                                    <constraint id="27349" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27350" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="480" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27351" firstAttribute="width" constant="26"/>
+                                    <constraint id="27352" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27353" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="480" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27354" firstAttribute="height" constant="26"/>
+                                    <constraint id="27355" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27356" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="480" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27357" firstAttribute="width" constant="26"/>
+                                    <constraint id="27358" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27359" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="480" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27360" firstAttribute="width" constant="26"/>
+                                    <constraint id="27361" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27362" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="480" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27363" firstAttribute="height" constant="26"/>
+                                    <constraint id="27364" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27365" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="454" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27366" firstAttribute="height" constant="26"/>
+                                    <constraint id="27367" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27368" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="53" y="454" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27369" firstAttribute="height" constant="26"/>
+                                    <constraint id="27370" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27371" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="79" y="454" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27372" firstAttribute="height" constant="26"/>
+                                    <constraint id="27373" firstAttribute="width" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27374" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="105" y="454" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27375" firstAttribute="width" constant="26"/>
+                                    <constraint id="27376" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="27377" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="131" y="454" width="26" height="26"/>
+                                <constraints>
+                                    <constraint id="27378" firstAttribute="width" constant="26"/>
+                                    <constraint id="27379" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooter 5:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27380" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="422" width="130" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="27381" firstAttribute="height" constant="28"/>
+                                    <constraint id="27382" firstAttribute="width" constant="130"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29739" translatesAutoresizingMaskIntoConstraints="NO" text="Totals:">
+                                <rect key="frame" x="264" y="422" width="130" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="29740" firstAttribute="height" constant="28"/>
+                                    <constraint id="29741" firstAttribute="width" constant="130"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooter 1:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29746" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="6">
+                                <rect key="frame" x="264" y="451" width="130" height="133"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="29749" firstAttribute="width" constant="130"/>
+                                    <constraint id="29750" firstAttribute="height" constant="133"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="21951" firstItem="21948" firstAttribute="leading" secondItem="15465" secondAttribute="leadingMargin" constant="7"/>
+                            <constraint id="21952" firstItem="21948" firstAttribute="top" secondItem="15461" secondAttribute="bottom" constant="20"/>
+                            <constraint id="24317" firstItem="21945" firstAttribute="leading" secondItem="21948" secondAttribute="leading"/>
+                            <constraint id="24318" firstItem="21945" firstAttribute="top" secondItem="21948" secondAttribute="bottom" constant="3"/>
+                            <constraint id="24321" firstItem="21946" firstAttribute="top" secondItem="21948" secondAttribute="bottom" constant="3"/>
+                            <constraint id="24322" firstItem="21946" firstAttribute="leading" secondItem="21945" secondAttribute="leading" constant="26"/>
+                            <constraint id="24325" firstItem="21947" firstAttribute="leading" secondItem="21946" secondAttribute="leading" constant="26"/>
+                            <constraint id="24326" firstItem="21947" firstAttribute="top" secondItem="21948" secondAttribute="bottom" constant="3"/>
+                            <constraint id="24329" firstItem="21949" firstAttribute="top" secondItem="21948" secondAttribute="bottom" constant="3"/>
+                            <constraint id="24330" firstItem="21949" firstAttribute="leading" secondItem="21947" secondAttribute="leading" constant="26"/>
+                            <constraint id="24333" firstItem="21950" firstAttribute="top" secondItem="21948" secondAttribute="bottom" constant="3"/>
+                            <constraint id="24334" firstItem="21950" firstAttribute="leading" secondItem="21949" secondAttribute="leading" constant="26"/>
+                            <constraint id="24337" firstItem="22166" firstAttribute="leading" secondItem="21948" secondAttribute="leading"/>
+                            <constraint id="24338" firstItem="22166" firstAttribute="top" secondItem="21945" secondAttribute="top" constant="26"/>
+                            <constraint id="24341" firstItem="22167" firstAttribute="top" secondItem="21946" secondAttribute="top" constant="26"/>
+                            <constraint id="24342" firstItem="22167" firstAttribute="leading" secondItem="22166" secondAttribute="leading" constant="26"/>
+                            <constraint id="24345" firstItem="22168" firstAttribute="top" secondItem="21947" secondAttribute="top" constant="26"/>
+                            <constraint id="24346" firstItem="22168" firstAttribute="leading" secondItem="22167" secondAttribute="leading" constant="26"/>
+                            <constraint id="24349" firstItem="22169" firstAttribute="top" secondItem="21949" secondAttribute="top" constant="26"/>
+                            <constraint id="24350" firstItem="22169" firstAttribute="leading" secondItem="22168" secondAttribute="leading" constant="26"/>
+                            <constraint id="24353" firstItem="22170" firstAttribute="top" secondItem="21950" secondAttribute="top" constant="26"/>
+                            <constraint id="24354" firstItem="22170" firstAttribute="leading" secondItem="22169" secondAttribute="leading" constant="26"/>
+                            <constraint id="24546" firstItem="22176" firstAttribute="top" secondItem="22166" secondAttribute="top" constant="26"/>
+                            <constraint id="24547" firstItem="22176" firstAttribute="leading" secondItem="21948" secondAttribute="leading"/>
+                            <constraint id="24550" firstItem="22177" firstAttribute="top" secondItem="22167" secondAttribute="top" constant="26"/>
+                            <constraint id="24551" firstItem="22177" firstAttribute="leading" secondItem="22176" secondAttribute="leading" constant="26"/>
+                            <constraint id="24554" firstItem="22178" firstAttribute="top" secondItem="22168" secondAttribute="top" constant="26"/>
+                            <constraint id="24555" firstItem="22178" firstAttribute="leading" secondItem="22177" secondAttribute="leading" constant="26"/>
+                            <constraint id="24558" firstItem="22179" firstAttribute="top" secondItem="22169" secondAttribute="top" constant="26"/>
+                            <constraint id="24559" firstItem="22179" firstAttribute="leading" secondItem="22178" secondAttribute="leading" constant="26"/>
+                            <constraint id="24562" firstItem="22180" firstAttribute="top" secondItem="22170" secondAttribute="top" constant="26"/>
+                            <constraint id="24563" firstItem="22180" firstAttribute="leading" secondItem="22179" secondAttribute="leading" constant="26"/>
+                            <constraint id="24566" firstItem="24307" firstAttribute="leading" secondItem="21948" secondAttribute="leading"/>
+                            <constraint id="24567" firstItem="24307" firstAttribute="top" secondItem="22176" secondAttribute="top" constant="26"/>
+                            <constraint id="24570" firstItem="24308" firstAttribute="top" secondItem="22177" secondAttribute="top" constant="26"/>
+                            <constraint id="24571" firstItem="24308" firstAttribute="leading" secondItem="24307" secondAttribute="leading" constant="26"/>
+                            <constraint id="24574" firstItem="24309" firstAttribute="top" secondItem="22178" secondAttribute="top" constant="26"/>
+                            <constraint id="24575" firstItem="24309" firstAttribute="leading" secondItem="24308" secondAttribute="leading" constant="26"/>
+                            <constraint id="24578" firstItem="24310" firstAttribute="top" secondItem="22179" secondAttribute="top" constant="26"/>
+                            <constraint id="24579" firstItem="24310" firstAttribute="leading" secondItem="24309" secondAttribute="leading" constant="26"/>
+                            <constraint id="24582" firstItem="24311" firstAttribute="top" secondItem="22180" secondAttribute="top" constant="26"/>
+                            <constraint id="24583" firstItem="24311" firstAttribute="leading" secondItem="24310" secondAttribute="leading" constant="26"/>
+                            <constraint id="24586" firstItem="24312" firstAttribute="top" secondItem="24307" secondAttribute="top" constant="25"/>
+                            <constraint id="24587" firstItem="24312" firstAttribute="leading" secondItem="21948" secondAttribute="leading"/>
+                            <constraint id="24590" firstItem="24313" firstAttribute="top" secondItem="24308" secondAttribute="top" constant="25"/>
+                            <constraint id="24591" firstItem="24313" firstAttribute="leading" secondItem="24312" secondAttribute="leading" constant="26"/>
+                            <constraint id="24594" firstItem="24314" firstAttribute="top" secondItem="24309" secondAttribute="top" constant="25"/>
+                            <constraint id="24595" firstItem="24314" firstAttribute="leading" secondItem="24313" secondAttribute="leading" constant="26"/>
+                            <constraint id="24598" firstItem="24315" firstAttribute="top" secondItem="24310" secondAttribute="top" constant="25"/>
+                            <constraint id="24599" firstItem="24315" firstAttribute="leading" secondItem="24314" secondAttribute="leading" constant="26"/>
+                            <constraint id="24602" firstItem="24316" firstAttribute="top" secondItem="24311" secondAttribute="top" constant="25"/>
+                            <constraint id="24603" firstItem="24316" firstAttribute="leading" secondItem="24315" secondAttribute="leading" constant="26"/>
+                            <constraint id="24844" firstItem="24733" firstAttribute="top" secondItem="15461" secondAttribute="bottom" constant="20"/>
+                            <constraint id="24900" firstItem="24733" firstAttribute="trailing" secondItem="15465" secondAttribute="trailingMargin"/>
+                            <constraint id="25204" firstItem="24730" firstAttribute="leading" secondItem="24733" secondAttribute="leading"/>
+                            <constraint id="25205" firstItem="24730" firstAttribute="top" secondItem="24733" secondAttribute="bottom" constant="3"/>
+                            <constraint id="25206" firstItem="24727" firstAttribute="leading" secondItem="24730" secondAttribute="leading" constant="26"/>
+                            <constraint id="25207" firstItem="24727" firstAttribute="top" secondItem="24733" secondAttribute="bottom" constant="3"/>
+                            <constraint id="25208" firstItem="24724" firstAttribute="leading" secondItem="24730" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25209" firstItem="24724" firstAttribute="top" secondItem="24733" secondAttribute="bottom" constant="3"/>
+                            <constraint id="25210" firstItem="24721" firstAttribute="leading" secondItem="24727" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25211" firstItem="24721" firstAttribute="top" secondItem="24733" secondAttribute="bottom" constant="3"/>
+                            <constraint id="25212" firstItem="24718" firstAttribute="top" secondItem="24733" secondAttribute="bottom" constant="3"/>
+                            <constraint id="25213" firstItem="24718" firstAttribute="leading" secondItem="24724" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25214" firstItem="24703" firstAttribute="leading" secondItem="24733" secondAttribute="leading"/>
+                            <constraint id="25215" firstItem="24703" firstAttribute="top" secondItem="24730" secondAttribute="top" constant="25"/>
+                            <constraint id="25216" firstItem="24706" firstAttribute="leading" secondItem="24703" secondAttribute="leading" constant="26"/>
+                            <constraint id="25217" firstItem="24706" firstAttribute="top" secondItem="24727" secondAttribute="top" constant="25"/>
+                            <constraint id="25218" firstItem="24709" firstAttribute="leading" secondItem="24706" secondAttribute="leading" constant="26"/>
+                            <constraint id="25219" firstItem="24709" firstAttribute="top" secondItem="24724" secondAttribute="top" constant="25"/>
+                            <constraint id="25220" firstItem="24712" firstAttribute="leading" secondItem="24709" secondAttribute="leading" constant="26"/>
+                            <constraint id="25221" firstItem="24712" firstAttribute="top" secondItem="24721" secondAttribute="top" constant="25"/>
+                            <constraint id="25222" firstItem="24715" firstAttribute="leading" secondItem="24712" secondAttribute="leading" constant="26"/>
+                            <constraint id="25223" firstItem="24715" firstAttribute="top" secondItem="24718" secondAttribute="top" constant="25"/>
+                            <constraint id="25224" firstItem="24700" firstAttribute="leading" secondItem="24733" secondAttribute="leading"/>
+                            <constraint id="25225" firstItem="24700" firstAttribute="top" secondItem="24730" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25226" firstItem="24697" firstAttribute="leading" secondItem="24700" secondAttribute="leading" constant="26"/>
+                            <constraint id="25227" firstItem="24697" firstAttribute="top" secondItem="24727" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25228" firstItem="24694" firstAttribute="leading" secondItem="24700" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25229" firstItem="24694" firstAttribute="top" secondItem="24724" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25230" firstItem="24691" firstAttribute="leading" secondItem="24697" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25231" firstItem="24691" firstAttribute="top" secondItem="24721" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25232" firstItem="24688" firstAttribute="leading" secondItem="24694" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25233" firstItem="24688" firstAttribute="top" secondItem="24718" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25234" firstItem="24673" firstAttribute="leading" secondItem="24733" secondAttribute="leading"/>
+                            <constraint id="25235" firstItem="24673" firstAttribute="top" secondItem="24703" secondAttribute="bottom" constant="26"/>
+                            <constraint id="25236" firstItem="24676" firstAttribute="leading" secondItem="24673" secondAttribute="leading" constant="26"/>
+                            <constraint id="25237" firstItem="24676" firstAttribute="top" secondItem="24706" secondAttribute="bottom" constant="26"/>
+                            <constraint id="25238" firstItem="24679" firstAttribute="leading" secondItem="24676" secondAttribute="leading" constant="26"/>
+                            <constraint id="25239" firstItem="24679" firstAttribute="top" secondItem="24709" secondAttribute="bottom" constant="26"/>
+                            <constraint id="25240" firstItem="24682" firstAttribute="leading" secondItem="24679" secondAttribute="leading" constant="26"/>
+                            <constraint id="25241" firstItem="24682" firstAttribute="top" secondItem="24712" secondAttribute="bottom" constant="26"/>
+                            <constraint id="25242" firstItem="24685" firstAttribute="leading" secondItem="24682" secondAttribute="leading" constant="26"/>
+                            <constraint id="25243" firstItem="24685" firstAttribute="top" secondItem="24715" secondAttribute="bottom" constant="26"/>
+                            <constraint id="25244" firstItem="24670" firstAttribute="leading" secondItem="24733" secondAttribute="leading"/>
+                            <constraint id="25245" firstItem="24670" firstAttribute="top" secondItem="24700" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25246" firstItem="24667" firstAttribute="leading" secondItem="24670" secondAttribute="leading" constant="26"/>
+                            <constraint id="25247" firstItem="24667" firstAttribute="top" secondItem="24697" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25248" firstItem="24664" firstAttribute="leading" secondItem="24670" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25249" firstItem="24664" firstAttribute="top" secondItem="24694" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25250" firstItem="24661" firstAttribute="leading" secondItem="24667" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25251" firstItem="24661" firstAttribute="top" secondItem="24691" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25252" firstItem="24658" firstAttribute="leading" secondItem="24664" secondAttribute="trailing" constant="26"/>
+                            <constraint id="25253" firstItem="24658" firstAttribute="top" secondItem="24688" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25924" firstItem="25659" firstAttribute="leading" secondItem="15465" secondAttribute="leadingMargin" constant="7"/>
+                            <constraint id="25925" firstItem="25659" firstAttribute="top" secondItem="21948" secondAttribute="bottom" constant="139"/>
+                            <constraint id="25926" firstItem="25662" firstAttribute="top" secondItem="25659" secondAttribute="bottom" constant="4"/>
+                            <constraint id="25927" firstItem="25662" firstAttribute="leading" secondItem="25659" secondAttribute="leading"/>
+                            <constraint id="25928" firstItem="25665" firstAttribute="top" secondItem="25659" secondAttribute="bottom" constant="4"/>
+                            <constraint id="25929" firstItem="25665" firstAttribute="leading" secondItem="25662" secondAttribute="leading" constant="26"/>
+                            <constraint id="25930" firstItem="25668" firstAttribute="top" secondItem="25659" secondAttribute="bottom" constant="4"/>
+                            <constraint id="25931" firstItem="25668" firstAttribute="leading" secondItem="25665" secondAttribute="leading" constant="26"/>
+                            <constraint id="25932" firstItem="25671" firstAttribute="top" secondItem="25659" secondAttribute="bottom" constant="4"/>
+                            <constraint id="25933" firstItem="25671" firstAttribute="leading" secondItem="25668" secondAttribute="leading" constant="26"/>
+                            <constraint id="25935" firstItem="25674" firstAttribute="top" secondItem="25659" secondAttribute="bottom" constant="4"/>
+                            <constraint id="25936" firstItem="25674" firstAttribute="leading" secondItem="25671" secondAttribute="leading" constant="26"/>
+                            <constraint id="25937" firstItem="25677" firstAttribute="top" secondItem="25662" secondAttribute="top" constant="25"/>
+                            <constraint id="25938" firstItem="25677" firstAttribute="leading" secondItem="25662" secondAttribute="leading"/>
+                            <constraint id="25939" firstItem="25680" firstAttribute="top" secondItem="25665" secondAttribute="top" constant="25"/>
+                            <constraint id="25940" firstItem="25680" firstAttribute="leading" secondItem="25677" secondAttribute="leading" constant="26"/>
+                            <constraint id="25941" firstItem="25683" firstAttribute="top" secondItem="25668" secondAttribute="top" constant="25"/>
+                            <constraint id="25942" firstItem="25683" firstAttribute="leading" secondItem="25680" secondAttribute="leading" constant="26"/>
+                            <constraint id="25943" firstItem="25686" firstAttribute="top" secondItem="25671" secondAttribute="top" constant="25"/>
+                            <constraint id="25944" firstItem="25686" firstAttribute="leading" secondItem="25683" secondAttribute="leading" constant="26"/>
+                            <constraint id="25945" firstItem="25689" firstAttribute="top" secondItem="25674" secondAttribute="top" constant="25"/>
+                            <constraint id="25946" firstItem="25689" firstAttribute="leading" secondItem="25686" secondAttribute="leading" constant="26"/>
+                            <constraint id="25947" firstItem="25692" firstAttribute="top" secondItem="25662" secondAttribute="bottom" constant="24"/>
+                            <constraint id="25948" firstItem="25692" firstAttribute="leading" secondItem="25659" secondAttribute="leading"/>
+                            <constraint id="25949" firstItem="25695" firstAttribute="top" secondItem="25680" secondAttribute="top" constant="25"/>
+                            <constraint id="25950" firstItem="25695" firstAttribute="leading" secondItem="25692" secondAttribute="leading" constant="26"/>
+                            <constraint id="25951" firstItem="25698" firstAttribute="top" secondItem="25668" secondAttribute="bottom" constant="24"/>
+                            <constraint id="25952" firstItem="25698" firstAttribute="leading" secondItem="25695" secondAttribute="leading" constant="26"/>
+                            <constraint id="25953" firstItem="25701" firstAttribute="top" secondItem="25686" secondAttribute="top" constant="25"/>
+                            <constraint id="25954" firstItem="25701" firstAttribute="leading" secondItem="25698" secondAttribute="leading" constant="26"/>
+                            <constraint id="25955" firstItem="25704" firstAttribute="top" secondItem="25689" secondAttribute="top" constant="25"/>
+                            <constraint id="25956" firstItem="25704" firstAttribute="leading" secondItem="25701" secondAttribute="leading" constant="26"/>
+                            <constraint id="25957" firstItem="25707" firstAttribute="top" secondItem="25692" secondAttribute="top" constant="26"/>
+                            <constraint id="25958" firstItem="25707" firstAttribute="leading" secondItem="25659" secondAttribute="leading"/>
+                            <constraint id="25959" firstItem="25710" firstAttribute="top" secondItem="25680" secondAttribute="bottom" constant="25"/>
+                            <constraint id="25960" firstItem="25710" firstAttribute="leading" secondItem="25707" secondAttribute="leading" constant="26"/>
+                            <constraint id="25961" firstItem="25713" firstAttribute="top" secondItem="25698" secondAttribute="top" constant="26"/>
+                            <constraint id="25962" firstItem="25713" firstAttribute="leading" secondItem="25710" secondAttribute="leading" constant="26"/>
+                            <constraint id="25963" firstItem="25716" firstAttribute="top" secondItem="25701" secondAttribute="top" constant="26"/>
+                            <constraint id="25964" firstItem="25716" firstAttribute="leading" secondItem="25713" secondAttribute="leading" constant="26"/>
+                            <constraint id="25965" firstItem="25719" firstAttribute="top" secondItem="25704" secondAttribute="top" constant="26"/>
+                            <constraint id="25966" firstItem="25719" firstAttribute="leading" secondItem="25716" secondAttribute="leading" constant="26"/>
+                            <constraint id="25967" firstItem="25722" firstAttribute="top" secondItem="25707" secondAttribute="top" constant="23"/>
+                            <constraint id="25968" firstItem="25722" firstAttribute="leading" secondItem="25659" secondAttribute="leading"/>
+                            <constraint id="25969" firstItem="25725" firstAttribute="top" secondItem="25710" secondAttribute="top" constant="23"/>
+                            <constraint id="25970" firstItem="25725" firstAttribute="leading" secondItem="25722" secondAttribute="leading" constant="26"/>
+                            <constraint id="25971" firstItem="25728" firstAttribute="top" secondItem="25713" secondAttribute="top" constant="23"/>
+                            <constraint id="25972" firstItem="25728" firstAttribute="leading" secondItem="25725" secondAttribute="leading" constant="26"/>
+                            <constraint id="25973" firstItem="25731" firstAttribute="top" secondItem="25716" secondAttribute="top" constant="23"/>
+                            <constraint id="25974" firstItem="25731" firstAttribute="leading" secondItem="25728" secondAttribute="leading" constant="26"/>
+                            <constraint id="25975" firstItem="25734" firstAttribute="top" secondItem="25719" secondAttribute="top" constant="23"/>
+                            <constraint id="25976" firstItem="25734" firstAttribute="leading" secondItem="25731" secondAttribute="leading" constant="26"/>
+                            <constraint id="26618" firstItem="26561" firstAttribute="top" secondItem="24733" secondAttribute="bottom" constant="139"/>
+                            <constraint id="26619" firstItem="26561" firstAttribute="trailing" secondItem="15465" secondAttribute="trailingMargin"/>
+                            <constraint id="26630" firstItem="26558" firstAttribute="top" secondItem="26561" secondAttribute="bottom" constant="4"/>
+                            <constraint id="26631" firstItem="26558" firstAttribute="leading" secondItem="26561" secondAttribute="leading"/>
+                            <constraint id="27205" firstItem="26555" firstAttribute="leading" secondItem="26558" secondAttribute="leading" constant="26"/>
+                            <constraint id="27206" firstItem="26555" firstAttribute="top" secondItem="26561" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27207" firstItem="26552" firstAttribute="leading" secondItem="26558" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27208" firstItem="26552" firstAttribute="top" secondItem="26561" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27209" firstItem="26549" firstAttribute="leading" secondItem="26555" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27210" firstItem="26549" firstAttribute="top" secondItem="26561" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27211" firstItem="26546" firstAttribute="leading" secondItem="26552" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27212" firstItem="26546" firstAttribute="top" secondItem="26561" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27213" firstItem="26531" firstAttribute="top" secondItem="26558" secondAttribute="top" constant="25"/>
+                            <constraint id="27214" firstItem="26531" firstAttribute="leading" secondItem="26561" secondAttribute="leading"/>
+                            <constraint id="27215" firstItem="26534" firstAttribute="leading" secondItem="26531" secondAttribute="leading" constant="26"/>
+                            <constraint id="27216" firstItem="26534" firstAttribute="top" secondItem="26555" secondAttribute="top" constant="25"/>
+                            <constraint id="27217" firstItem="26537" firstAttribute="leading" secondItem="26534" secondAttribute="leading" constant="26"/>
+                            <constraint id="27218" firstItem="26537" firstAttribute="top" secondItem="26552" secondAttribute="top" constant="25"/>
+                            <constraint id="27219" firstItem="26540" firstAttribute="leading" secondItem="26537" secondAttribute="leading" constant="26"/>
+                            <constraint id="27220" firstItem="26540" firstAttribute="top" secondItem="26549" secondAttribute="top" constant="25"/>
+                            <constraint id="27221" firstItem="26543" firstAttribute="leading" secondItem="26540" secondAttribute="leading" constant="26"/>
+                            <constraint id="27222" firstItem="26543" firstAttribute="top" secondItem="26546" secondAttribute="top" constant="25"/>
+                            <constraint id="27223" firstItem="26528" firstAttribute="leading" secondItem="26561" secondAttribute="leading"/>
+                            <constraint id="27224" firstItem="26528" firstAttribute="top" secondItem="26558" secondAttribute="bottom" constant="24"/>
+                            <constraint id="27225" firstItem="26525" firstAttribute="leading" secondItem="26528" secondAttribute="leading" constant="26"/>
+                            <constraint id="27226" firstItem="26525" firstAttribute="top" secondItem="26555" secondAttribute="bottom" constant="24"/>
+                            <constraint id="27227" firstItem="26522" firstAttribute="leading" secondItem="26528" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27228" firstItem="26522" firstAttribute="top" secondItem="26552" secondAttribute="bottom" constant="24"/>
+                            <constraint id="27229" firstItem="26519" firstAttribute="leading" secondItem="26525" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27230" firstItem="26519" firstAttribute="top" secondItem="26549" secondAttribute="bottom" constant="24"/>
+                            <constraint id="27231" firstItem="26516" firstAttribute="leading" secondItem="26522" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27232" firstItem="26516" firstAttribute="top" secondItem="26546" secondAttribute="bottom" constant="24"/>
+                            <constraint id="27233" firstItem="26501" firstAttribute="leading" secondItem="26561" secondAttribute="leading"/>
+                            <constraint id="27234" firstItem="26501" firstAttribute="top" secondItem="26531" secondAttribute="bottom" constant="25"/>
+                            <constraint id="27235" firstItem="26504" firstAttribute="leading" secondItem="26501" secondAttribute="leading" constant="26"/>
+                            <constraint id="27236" firstItem="26504" firstAttribute="top" secondItem="26534" secondAttribute="bottom" constant="25"/>
+                            <constraint id="27237" firstItem="26507" firstAttribute="leading" secondItem="26504" secondAttribute="leading" constant="26"/>
+                            <constraint id="27238" firstItem="26507" firstAttribute="top" secondItem="26537" secondAttribute="bottom" constant="25"/>
+                            <constraint id="27239" firstItem="26510" firstAttribute="leading" secondItem="26507" secondAttribute="leading" constant="26"/>
+                            <constraint id="27240" firstItem="26510" firstAttribute="top" secondItem="26540" secondAttribute="bottom" constant="25"/>
+                            <constraint id="27241" firstItem="26513" firstAttribute="leading" secondItem="26510" secondAttribute="leading" constant="26"/>
+                            <constraint id="27242" firstItem="26513" firstAttribute="top" secondItem="26543" secondAttribute="bottom" constant="25"/>
+                            <constraint id="27243" firstItem="26498" firstAttribute="top" secondItem="26528" secondAttribute="bottom" constant="23"/>
+                            <constraint id="27244" firstItem="26498" firstAttribute="leading" secondItem="26561" secondAttribute="leading"/>
+                            <constraint id="27245" firstItem="26495" firstAttribute="leading" secondItem="26498" secondAttribute="leading" constant="26"/>
+                            <constraint id="27246" firstItem="26495" firstAttribute="top" secondItem="26525" secondAttribute="bottom" constant="23"/>
+                            <constraint id="27247" firstItem="26492" firstAttribute="leading" secondItem="26498" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27248" firstItem="26492" firstAttribute="top" secondItem="26522" secondAttribute="bottom" constant="23"/>
+                            <constraint id="27249" firstItem="26489" firstAttribute="leading" secondItem="26495" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27250" firstItem="26489" firstAttribute="top" secondItem="26519" secondAttribute="bottom" constant="23"/>
+                            <constraint id="27251" firstItem="26486" firstAttribute="leading" secondItem="26492" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27252" firstItem="26486" firstAttribute="top" secondItem="26516" secondAttribute="bottom" constant="23"/>
+                            <constraint id="27447" firstItem="27365" firstAttribute="top" secondItem="27380" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27448" firstItem="27380" firstAttribute="leading" secondItem="15465" secondAttribute="leadingMargin" constant="7"/>
+                            <constraint id="27449" firstItem="27380" firstAttribute="top" secondItem="21948" secondAttribute="bottom" constant="304"/>
+                            <constraint id="27450" firstItem="27365" firstAttribute="leading" secondItem="27380" secondAttribute="leading"/>
+                            <constraint id="27559" firstItem="27368" firstAttribute="top" secondItem="27380" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27560" firstItem="27368" firstAttribute="leading" secondItem="27365" secondAttribute="leading" constant="26"/>
+                            <constraint id="27561" firstItem="27371" firstAttribute="top" secondItem="27380" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27562" firstItem="27371" firstAttribute="leading" secondItem="27368" secondAttribute="leading" constant="26"/>
+                            <constraint id="27563" firstItem="27374" firstAttribute="top" secondItem="27380" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27564" firstItem="27374" firstAttribute="leading" secondItem="27371" secondAttribute="leading" constant="26"/>
+                            <constraint id="27565" firstItem="27377" firstAttribute="top" secondItem="27380" secondAttribute="bottom" constant="4"/>
+                            <constraint id="27566" firstItem="27377" firstAttribute="leading" secondItem="27374" secondAttribute="leading" constant="26"/>
+                            <constraint id="27567" firstItem="27362" firstAttribute="top" secondItem="27365" secondAttribute="top" constant="26"/>
+                            <constraint id="27568" firstItem="27362" firstAttribute="leading" secondItem="27380" secondAttribute="leading"/>
+                            <constraint id="27569" firstItem="27359" firstAttribute="top" secondItem="27368" secondAttribute="top" constant="26"/>
+                            <constraint id="27570" firstItem="27359" firstAttribute="leading" secondItem="27362" secondAttribute="leading" constant="26"/>
+                            <constraint id="27571" firstItem="27356" firstAttribute="top" secondItem="27371" secondAttribute="top" constant="26"/>
+                            <constraint id="27572" firstItem="27356" firstAttribute="leading" secondItem="27362" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27573" firstItem="27353" firstAttribute="top" secondItem="27374" secondAttribute="top" constant="26"/>
+                            <constraint id="27574" firstItem="27353" firstAttribute="leading" secondItem="27359" secondAttribute="trailing" constant="26"/>
+                            <constraint id="27575" firstItem="27350" firstAttribute="top" secondItem="27377" secondAttribute="top" constant="26"/>
+                            <constraint id="28406" firstItem="27350" firstAttribute="leading" secondItem="27356" secondAttribute="trailing" constant="26"/>
+                            <constraint id="29042" firstItem="27335" firstAttribute="top" secondItem="27365" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29043" firstItem="27335" firstAttribute="leading" secondItem="27380" secondAttribute="leading"/>
+                            <constraint id="29044" firstItem="27338" firstAttribute="top" secondItem="27368" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29045" firstItem="27338" firstAttribute="leading" secondItem="27335" secondAttribute="leading" constant="26"/>
+                            <constraint id="29046" firstItem="27341" firstAttribute="top" secondItem="27371" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29047" firstItem="27341" firstAttribute="leading" secondItem="27338" secondAttribute="leading" constant="26"/>
+                            <constraint id="29048" firstItem="27344" firstAttribute="top" secondItem="27374" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29049" firstItem="27344" firstAttribute="leading" secondItem="27341" secondAttribute="leading" constant="26"/>
+                            <constraint id="29050" firstItem="27347" firstAttribute="top" secondItem="27377" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29051" firstItem="27347" firstAttribute="leading" secondItem="27344" secondAttribute="leading" constant="26"/>
+                            <constraint id="29052" firstItem="27332" firstAttribute="top" secondItem="27362" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29053" firstItem="27332" firstAttribute="leading" secondItem="27380" secondAttribute="leading"/>
+                            <constraint id="29054" firstItem="27329" firstAttribute="top" secondItem="27359" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29055" firstItem="27329" firstAttribute="leading" secondItem="27332" secondAttribute="leading" constant="26"/>
+                            <constraint id="29056" firstItem="27326" firstAttribute="top" secondItem="27356" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29057" firstItem="27326" firstAttribute="leading" secondItem="27332" secondAttribute="trailing" constant="26"/>
+                            <constraint id="29058" firstItem="27323" firstAttribute="top" secondItem="27353" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29059" firstItem="27323" firstAttribute="leading" secondItem="27329" secondAttribute="trailing" constant="26"/>
+                            <constraint id="29060" firstItem="27320" firstAttribute="top" secondItem="27350" secondAttribute="bottom" constant="24"/>
+                            <constraint id="29061" firstItem="27320" firstAttribute="leading" secondItem="27326" secondAttribute="trailing" constant="26"/>
+                            <constraint id="29062" firstItem="27317" firstAttribute="top" secondItem="27335" secondAttribute="bottom" constant="26"/>
+                            <constraint id="29063" firstItem="27317" firstAttribute="leading" secondItem="27380" secondAttribute="leading"/>
+                            <constraint id="29064" firstItem="27314" firstAttribute="top" secondItem="27338" secondAttribute="bottom" constant="26"/>
+                            <constraint id="29065" firstItem="27314" firstAttribute="leading" secondItem="27317" secondAttribute="leading" constant="26"/>
+                            <constraint id="29066" firstItem="27311" firstAttribute="top" secondItem="27341" secondAttribute="bottom" constant="26"/>
+                            <constraint id="29067" firstItem="27311" firstAttribute="leading" secondItem="27317" secondAttribute="trailing" constant="26"/>
+                            <constraint id="29068" firstItem="27308" firstAttribute="top" secondItem="27344" secondAttribute="bottom" constant="26"/>
+                            <constraint id="29069" firstItem="27308" firstAttribute="leading" secondItem="27314" secondAttribute="trailing" constant="26"/>
+                            <constraint id="29070" firstItem="27305" firstAttribute="top" secondItem="27347" secondAttribute="bottom" constant="26"/>
+                            <constraint id="29071" firstItem="27305" firstAttribute="leading" secondItem="27311" secondAttribute="trailing" constant="26"/>
+                            <constraint id="29744" firstItem="29739" firstAttribute="trailing" secondItem="15465" secondAttribute="trailingMargin"/>
+                            <constraint id="29745" firstItem="29739" firstAttribute="top" secondItem="26561" secondAttribute="bottom" constant="137"/>
+                            <constraint id="29747" firstItem="29746" firstAttribute="leading" secondItem="29739" secondAttribute="leading"/>
+                            <constraint id="29751" firstItem="29746" firstAttribute="top" secondItem="29739" secondAttribute="bottom" constant="1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ResultsControllerName" destination="15465" id="name-outlet-15465"/>
+                        <outlet property="x1y1" destination="21945" id="name-outlet-21945"/>
+                        <outlet property="x2y1" destination="21946" id="name-outlet-21946"/>
+                        <outlet property="ResultsBRLabel" destination="29739" id="name-outlet-29739"/>
+                        <outlet property="x3y1" destination="21947" id="name-outlet-21947"/>
+                        <outlet property="x4y1" destination="21949" id="name-outlet-21949"/>
+                        <outlet property="x5y1" destination="21950" id="name-outlet-21950"/>
+                        <outlet property="x1y2" destination="22166" id="name-outlet-22166"/>
+                        <outlet property="x1y3" destination="22176" id="name-outlet-22176"/>
+                        <outlet property="x1y4" destination="24307" id="name-outlet-24307"/>
+                        <outlet property="x1y5" destination="24312" id="name-outlet-24312"/>
+                        <outlet property="x2y2" destination="22167" id="name-outlet-22167"/>
+                        <outlet property="x2y3" destination="22177" id="name-outlet-22177"/>
+                        <outlet property="x2y4" destination="24308" id="name-outlet-24308"/>
+                        <outlet property="x2y5" destination="24313" id="name-outlet-24313"/>
+                        <outlet property="x3y2" destination="22168" id="name-outlet-22168"/>
+                        <outlet property="x3y3" destination="22178" id="name-outlet-22178"/>
+                        <outlet property="x3y4" destination="24309" id="name-outlet-24309"/>
+                        <outlet property="x3y5" destination="24314" id="name-outlet-24314"/>
+                        <outlet property="x4y2" destination="22169" id="name-outlet-22169"/>
+                        <outlet property="x4y3" destination="22179" id="name-outlet-22179"/>
+                        <outlet property="x4y4" destination="24310" id="name-outlet-24310"/>
+                        <outlet property="x4y5" destination="24315" id="name-outlet-24315"/>
+                        <outlet property="x5y2" destination="22170" id="name-outlet-22170"/>
+                        <outlet property="x5y3" destination="22180" id="name-outlet-22180"/>
+                        <outlet property="x5y4" destination="24311" id="name-outlet-24311"/>
+                        <outlet property="x5y5" destination="24316" id="name-outlet-24316"/>
+                        <outlet property="ax1y1" destination="24730" id="name-outlet-24730"/>
+                        <outlet property="ax1y2" destination="24703" id="name-outlet-24703"/>
+                        <outlet property="ax1y3" destination="24700" id="name-outlet-24700"/>
+                        <outlet property="ax1y4" destination="24673" id="name-outlet-24673"/>
+                        <outlet property="ax1y5" destination="24670" id="name-outlet-24670"/>
+                        <outlet property="ax2y1" destination="24727" id="name-outlet-24727"/>
+                        <outlet property="ax2y2" destination="24706" id="name-outlet-24706"/>
+                        <outlet property="ax2y3" destination="24697" id="name-outlet-24697"/>
+                        <outlet property="ax2y4" destination="24676" id="name-outlet-24676"/>
+                        <outlet property="ax2y5" destination="24667" id="name-outlet-24667"/>
+                        <outlet property="ax3y1" destination="24724" id="name-outlet-24724"/>
+                        <outlet property="ax3y2" destination="24709" id="name-outlet-24709"/>
+                        <outlet property="ax3y3" destination="24694" id="name-outlet-24694"/>
+                        <outlet property="ax3y4" destination="24679" id="name-outlet-24679"/>
+                        <outlet property="ax3y5" destination="24664" id="name-outlet-24664"/>
+                        <outlet property="ax4y1" destination="24721" id="name-outlet-24721"/>
+                        <outlet property="ax4y2" destination="24712" id="name-outlet-24712"/>
+                        <outlet property="ax4y3" destination="24691" id="name-outlet-24691"/>
+                        <outlet property="ax4y4" destination="24682" id="name-outlet-24682"/>
+                        <outlet property="ax4y5" destination="24661" id="name-outlet-24661"/>
+                        <outlet property="ax5y1" destination="24718" id="name-outlet-24718"/>
+                        <outlet property="ax5y2" destination="24715" id="name-outlet-24715"/>
+                        <outlet property="ax5y3" destination="24688" id="name-outlet-24688"/>
+                        <outlet property="ax5y4" destination="24685" id="name-outlet-24685"/>
+                        <outlet property="ax5y5" destination="24658" id="name-outlet-24658"/>
+                        <outlet property="bx1y1" destination="25662" id="name-outlet-25662"/>
+                        <outlet property="bx1y2" destination="25677" id="name-outlet-25677"/>
+                        <outlet property="bx1y3" destination="25692" id="name-outlet-25692"/>
+                        <outlet property="bx1y4" destination="25707" id="name-outlet-25707"/>
+                        <outlet property="bx1y5" destination="25722" id="name-outlet-25722"/>
+                        <outlet property="bx2y1" destination="25665" id="name-outlet-25665"/>
+                        <outlet property="bx2y2" destination="25680" id="name-outlet-25680"/>
+                        <outlet property="bx2y3" destination="25695" id="name-outlet-25695"/>
+                        <outlet property="bx2y4" destination="25710" id="name-outlet-25710"/>
+                        <outlet property="bx2y5" destination="25725" id="name-outlet-25725"/>
+                        <outlet property="bx3y1" destination="25668" id="name-outlet-25668"/>
+                        <outlet property="bx3y2" destination="25683" id="name-outlet-25683"/>
+                        <outlet property="bx3y3" destination="25698" id="name-outlet-25698"/>
+                        <outlet property="bx3y4" destination="25713" id="name-outlet-25713"/>
+                        <outlet property="bx3y5" destination="25728" id="name-outlet-25728"/>
+                        <outlet property="bx4y1" destination="25671" id="name-outlet-25671"/>
+                        <outlet property="bx4y2" destination="25686" id="name-outlet-25686"/>
+                        <outlet property="bx4y3" destination="25701" id="name-outlet-25701"/>
+                        <outlet property="bx4y4" destination="25716" id="name-outlet-25716"/>
+                        <outlet property="bx4y5" destination="25731" id="name-outlet-25731"/>
+                        <outlet property="bx5y1" destination="25674" id="name-outlet-25674"/>
+                        <outlet property="bx5y2" destination="25689" id="name-outlet-25689"/>
+                        <outlet property="bx5y3" destination="25704" id="name-outlet-25704"/>
+                        <outlet property="bx5y4" destination="25719" id="name-outlet-25719"/>
+                        <outlet property="bx5y5" destination="25734" id="name-outlet-25734"/>
+                        <outlet property="cx1y1" destination="26558" id="name-outlet-26558"/>
+                        <outlet property="cx1y2" destination="26531" id="name-outlet-26531"/>
+                        <outlet property="cx1y3" destination="26528" id="name-outlet-26528"/>
+                        <outlet property="cx1y4" destination="26501" id="name-outlet-26501"/>
+                        <outlet property="cx1y5" destination="26498" id="name-outlet-26498"/>
+                        <outlet property="cx2y1" destination="26555" id="name-outlet-26555"/>
+                        <outlet property="cx2y2" destination="26534" id="name-outlet-26534"/>
+                        <outlet property="cx2y3" destination="26525" id="name-outlet-26525"/>
+                        <outlet property="cx2y4" destination="26504" id="name-outlet-26504"/>
+                        <outlet property="cx2y5" destination="26495" id="name-outlet-26495"/>
+                        <outlet property="cx3y1" destination="26552" id="name-outlet-26552"/>
+                        <outlet property="cx3y2" destination="26537" id="name-outlet-26537"/>
+                        <outlet property="cx3y3" destination="26522" id="name-outlet-26522"/>
+                        <outlet property="cx3y4" destination="26507" id="name-outlet-26507"/>
+                        <outlet property="cx3y5" destination="26492" id="name-outlet-26492"/>
+                        <outlet property="cx4y1" destination="26549" id="name-outlet-26549"/>
+                        <outlet property="cx4y2" destination="26540" id="name-outlet-26540"/>
+                        <outlet property="cx4y3" destination="26519" id="name-outlet-26519"/>
+                        <outlet property="cx4y4" destination="26510" id="name-outlet-26510"/>
+                        <outlet property="cx4y5" destination="26489" id="name-outlet-26489"/>
+                        <outlet property="cx5y1" destination="26546" id="name-outlet-26546"/>
+                        <outlet property="cx5y2" destination="26543" id="name-outlet-26543"/>
+                        <outlet property="cx5y3" destination="26516" id="name-outlet-26516"/>
+                        <outlet property="cx5y4" destination="26513" id="name-outlet-26513"/>
+                        <outlet property="cx5y5" destination="26486" id="name-outlet-26486"/>
+                        <outlet property="dx1y1" destination="27365" id="name-outlet-27365"/>
+                        <outlet property="dx1y2" destination="27362" id="name-outlet-27362"/>
+                        <outlet property="dx1y3" destination="27335" id="name-outlet-27335"/>
+                        <outlet property="dx1y4" destination="27332" id="name-outlet-27332"/>
+                        <outlet property="dx1y5" destination="27317" id="name-outlet-27317"/>
+                        <outlet property="dx2y1" destination="27368" id="name-outlet-27368"/>
+                        <outlet property="dx2y2" destination="27359" id="name-outlet-27359"/>
+                        <outlet property="dx2y3" destination="27338" id="name-outlet-27338"/>
+                        <outlet property="dx2y4" destination="27329" id="name-outlet-27329"/>
+                        <outlet property="dx2y5" destination="27314" id="name-outlet-27314"/>
+                        <outlet property="dx3y1" destination="27371" id="name-outlet-27371"/>
+                        <outlet property="dx3y2" destination="27356" id="name-outlet-27356"/>
+                        <outlet property="dx3y3" destination="27341" id="name-outlet-27341"/>
+                        <outlet property="dx3y4" destination="27326" id="name-outlet-27326"/>
+                        <outlet property="dx3y5" destination="27311" id="name-outlet-27311"/>
+                        <outlet property="dx4y1" destination="27374" id="name-outlet-27374"/>
+                        <outlet property="dx4y2" destination="27353" id="name-outlet-27353"/>
+                        <outlet property="dx4y3" destination="27344" id="name-outlet-27344"/>
+                        <outlet property="dx4y5" destination="27308" id="name-outlet-27308"/>
+                        <outlet property="dx5y1" destination="27377" id="name-outlet-27377"/>
+                        <outlet property="dx5y2" destination="27350" id="name-outlet-27350"/>
+                        <outlet property="dx5y3" destination="27347" id="name-outlet-27347"/>
+                        <outlet property="dx5y4" destination="27320" id="name-outlet-27320"/>
+                        <outlet property="dx5y5" destination="27305" id="name-outlet-27305"/>
+                        <outlet property="Shooter1Label" destination="21948" id="name-outlet-21948"/>
+                        <outlet property="Shooter2Label" destination="24733" id="name-outlet-24733"/>
+                        <outlet property="Shooter3Label" destination="25659" id="name-outlet-25659"/>
+                        <outlet property="Shooter4Label" destination="26561" id="name-outlet-26561"/>
+                        <outlet property="Shooter5Label" destination="27380" id="name-outlet-27380"/>
+                        <outlet property="ShooterScoresLabel" destination="29746" id="name-outlet-29746"/>
+                        <outlet property="dx4y4" destination="27323" id="name-outlet-27323"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15466" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="797"/>
         </scene>
     </scenes>
     <resources>
-        <image name="TrapDesign.png" width="216" height="216"/>
         <image name="RedBoxTSS.png" width="36" height="36"/>
+        <image name="TrapDesignMap.png" width="216" height="216"/>
     </resources>
 </document>

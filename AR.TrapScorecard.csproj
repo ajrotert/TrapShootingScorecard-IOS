@@ -114,10 +114,20 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Shooter.cs" />
+    <Compile Include="SNameController.cs" />
+    <Compile Include="SNameController.designer.cs">
+      <DependentUpon>SNameController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultsController.cs" />
+    <Compile Include="ResultsController.designer.cs">
+      <DependentUpon>ResultsController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\TrapDesign.png" />
     <BundleResource Include="Resources\RedBoxTSS.png" />
+    <BundleResource Include="Resources\TrapDesignMap.png" />
+    <BundleResource Include="Resources\MissClay.png" />
+    <BundleResource Include="Resources\HitClay.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

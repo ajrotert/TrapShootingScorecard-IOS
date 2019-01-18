@@ -61,6 +61,10 @@ namespace AR.TrapScorecard
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton StartButton { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView TrapMapIV { get; set; }
+
         [Action ("Hit_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void Hit_Clicked (UIKit.UIButton sender);
@@ -141,6 +145,11 @@ namespace AR.TrapScorecard
             if (StartButton != null) {
                 StartButton.Dispose ();
                 StartButton = null;
+            }
+
+            if (TrapMapIV != null) {
+                TrapMapIV.Dispose ();
+                TrapMapIV = null;
             }
         }
     }
