@@ -416,6 +416,10 @@ namespace AR.TrapScorecard
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton RestartButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel ResultsBRLabel { get; set; }
 
         [Outlet]
@@ -545,6 +549,10 @@ namespace AR.TrapScorecard
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView x5y5 { get; set; }
+
+        [Action ("RestartButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void RestartButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -1046,6 +1054,11 @@ namespace AR.TrapScorecard
             if (dx5y5 != null) {
                 dx5y5.Dispose ();
                 dx5y5 = null;
+            }
+
+            if (RestartButton != null) {
+                RestartButton.Dispose ();
+                RestartButton = null;
             }
 
             if (ResultsBRLabel != null) {

@@ -16,6 +16,14 @@ namespace AR.TrapScorecard
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton AddButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ContinueButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel FiveLabel { get; set; }
 
         [Outlet]
@@ -25,6 +33,26 @@ namespace AR.TrapScorecard
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel OneLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView RB1 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView RB2 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView RB3 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView RB4 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView RB5 { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -54,6 +82,14 @@ namespace AR.TrapScorecard
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel TwoLabel { get; set; }
 
+        [Action ("AddButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void AddButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("ContinueButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ContinueButton_TouchUpInside (UIKit.UIButton sender);
+
         [Action ("Shooter1_Changed:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void Shooter1_Changed (UIKit.UITextField sender);
@@ -76,6 +112,16 @@ namespace AR.TrapScorecard
 
         void ReleaseDesignerOutlets ()
         {
+            if (AddButton != null) {
+                AddButton.Dispose ();
+                AddButton = null;
+            }
+
+            if (ContinueButton != null) {
+                ContinueButton.Dispose ();
+                ContinueButton = null;
+            }
+
             if (FiveLabel != null) {
                 FiveLabel.Dispose ();
                 FiveLabel = null;
@@ -89,6 +135,31 @@ namespace AR.TrapScorecard
             if (OneLabel != null) {
                 OneLabel.Dispose ();
                 OneLabel = null;
+            }
+
+            if (RB1 != null) {
+                RB1.Dispose ();
+                RB1 = null;
+            }
+
+            if (RB2 != null) {
+                RB2.Dispose ();
+                RB2 = null;
+            }
+
+            if (RB3 != null) {
+                RB3.Dispose ();
+                RB3 = null;
+            }
+
+            if (RB4 != null) {
+                RB4.Dispose ();
+                RB4 = null;
+            }
+
+            if (RB5 != null) {
+                RB5.Dispose ();
+                RB5 = null;
             }
 
             if (ShooterTextBox1 != null) {

@@ -12,22 +12,15 @@ namespace AR.TrapScorecard
         }
 
         public static Shooter[] shooters;
-        //UITextField NameInputTextBox = new UITextField();
         int current = 0;
         int pos = 0;
         public static int max;
-        
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            /*for (int a = 0; a < 5; a++)
-            {
-                shooters[a] = new Shooter("Shooter " + (a + 1).ToString());
-            }*/
-            // HitButton.Enabled = false;
-            // MissButton.Enabled = false;
-            // PauseButton.Enabled = false;
-
+            ChangeButton.Hidden = true;
+            ShooterNameLabel.Text += Environment.NewLine + "(Select shooters, press start)";
             // Perform any additional setup after loading the view, typically from a nib.
         }  
 
@@ -37,12 +30,14 @@ namespace AR.TrapScorecard
             {
                 HitButton.Enabled = true;
                 MissButton.Enabled = true;
+                ChangeButton.Hidden = true;
                 PauseButton.SetTitle("Pause", UIControlState.Normal);
             }
             else
             {
                 HitButton.Enabled = false;
                 MissButton.Enabled = false;
+                ChangeButton.Hidden = false;
                 PauseButton.SetTitle("Resume", UIControlState.Normal);
             }
         }
@@ -54,14 +49,15 @@ namespace AR.TrapScorecard
             NumberOfShooterSlider.Enabled = false;
             for (int a = 0; a < max; a++)
             {
-                //if(shooters[a] != null && (shooters[a].Name == "" || shooters[a].Name==""))
-                    shooters[a] = new Shooter("Shooter " + (a+1).ToString());
+                shooters[a] = new Shooter("Shooter " + (a+1).ToString());
             }
             StartButton.Enabled = false;
             PauseButton.Enabled = true;
             MissButton.Enabled = true;
             HitButton.Enabled = true;
+            PastScores_Button.Hidden = true;
             UpdateBoxes();
+            UpdateNames();
         }
         public void GetText(string title, string message)
         {
@@ -132,7 +128,7 @@ namespace AR.TrapScorecard
 
         partial void Hit_Clicked(UIButton sender)
         {
-            shooters[pos].UpdateScore(true); //Shooter.Current
+            shooters[pos].UpdateScore(true);
             Update();
         }
 
@@ -152,13 +148,27 @@ namespace AR.TrapScorecard
                 pos++;
                 current++;
                 if (current % (max * 5) == 0 && current != 0)
-                    GetText("Rotate", null);
+                    GetText("Rotate", RotateMessage());
                 if (pos == max)
                     pos = 0;
                 UpdateBoxes();
+                UpdateNames();
             }
         }
-
+        public string RotateMessage()
+        {
+            string message = "";
+            for(int a = 0; a<max;a++)
+            {
+                message += shooters[a].Name + "\t" + shooters[a].GetRoundTotal() + Environment.NewLine;
+            }
+            return message;
+        }
+        public void UpdateNames()
+        {
+            ShooterNameLabel.Text = shooters[pos].Name;
+            ShotLabel.Text = "Shot: " + ((shooters[pos].shot%5) + 1);
+        }
         public void UpdateBoxes()
         {
             RedBox1.Hidden = true;
@@ -179,11 +189,12 @@ namespace AR.TrapScorecard
 
         }
 
-        public void End()
+        public void End()//Restes the screen while the view changes
         {
             HitButton.Enabled = false;
             MissButton.Enabled = false;
             PauseButton.Enabled = false;
+            PastScores_Button.Hidden = false;
 
             string message = "";
             string title = "Shooter:\t\tScore:";
@@ -197,7 +208,7 @@ namespace AR.TrapScorecard
             current = 0;
             pos = 0;
 
-
+            ShooterNameLabel.Text = "Trap Scorecard" + Environment.NewLine + "(Select shooters, press start)";
         }
 
         /* public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
@@ -230,6 +241,15 @@ namespace AR.TrapScorecard
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
+        }
+
+        partial void PastScores_Button_TouchUpInside(UIButton sender)
+        {
+
+            //Data data = new Data();
+            //TableSource ts = new TableSource(data.names);
+            //figure out how to fill cells, and test it with array
+               //eventually this will just pull the data from a database, and load it into view
         }
     }
 }

@@ -15,6 +15,10 @@ namespace AR.TrapScorecard
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ChangeButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton HitButton { get; set; }
 
         [Outlet]
@@ -28,6 +32,10 @@ namespace AR.TrapScorecard
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel NumShootersLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton PastScores_Button { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -59,6 +67,10 @@ namespace AR.TrapScorecard
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel ShotLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton StartButton { get; set; }
 
         [Outlet]
@@ -72,6 +84,10 @@ namespace AR.TrapScorecard
         [Action ("Miss_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void Miss_Clicked (UIKit.UIButton sender);
+
+        [Action ("PastScores_Button_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void PastScores_Button_TouchUpInside (UIKit.UIButton sender);
 
         [Action ("Pause_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -87,6 +103,11 @@ namespace AR.TrapScorecard
 
         void ReleaseDesignerOutlets ()
         {
+            if (ChangeButton != null) {
+                ChangeButton.Dispose ();
+                ChangeButton = null;
+            }
+
             if (HitButton != null) {
                 HitButton.Dispose ();
                 HitButton = null;
@@ -105,6 +126,11 @@ namespace AR.TrapScorecard
             if (NumShootersLabel != null) {
                 NumShootersLabel.Dispose ();
                 NumShootersLabel = null;
+            }
+
+            if (PastScores_Button != null) {
+                PastScores_Button.Dispose ();
+                PastScores_Button = null;
             }
 
             if (PauseButton != null) {
@@ -140,6 +166,11 @@ namespace AR.TrapScorecard
             if (ShooterNameLabel != null) {
                 ShooterNameLabel.Dispose ();
                 ShooterNameLabel = null;
+            }
+
+            if (ShotLabel != null) {
+                ShotLabel.Dispose ();
+                ShotLabel = null;
             }
 
             if (StartButton != null) {

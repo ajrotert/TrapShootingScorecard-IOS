@@ -16,17 +16,18 @@ namespace AR.TrapScorecard
             ShooterTextBox4.Enabled = false;
             ShooterTextBox5.Enabled = false;
 
-            if (ViewController.max >= 1)
-                ShooterTextBox1.Enabled = true;
-            if (ViewController.max >= 2)
-                ShooterTextBox2.Enabled = true;
-            if (ViewController.max >= 3)
-                ShooterTextBox3.Enabled = true;
-            if (ViewController.max >= 4)
-                ShooterTextBox4.Enabled = true;
-            if (ViewController.max >= 5)
-                ShooterTextBox5.Enabled = true;
+            RB1.Hidden = true;
+            RB2.Hidden = true;
+            RB3.Hidden = true;
+            RB4.Hidden = true;
+            RB5.Hidden = true;
+            OneLabel.Hidden = true;
+            TwoLabel.Hidden = true;
+            ThreeLabel.Hidden = true;
+            FourLabel.Hidden = true;
+            FiveLabel.Hidden = true;
 
+            Update();
 
             ShooterTextBox1.ShouldReturn = (textField) => {
                 textField.ResignFirstResponder();
@@ -48,6 +49,44 @@ namespace AR.TrapScorecard
                 textField.ResignFirstResponder();
                 return true;
             };
+        }
+
+        public void Update()
+        {
+            if (ViewController.max == 5)
+                AddButton.Hidden = true;
+
+            if (ViewController.max >= 1)
+            {
+                ShooterTextBox1.Enabled = true;
+                RB1.Hidden = false;
+                OneLabel.Hidden = false;
+            }
+            if (ViewController.max >= 2)
+            {
+                ShooterTextBox2.Enabled = true;
+                RB2.Hidden = false;
+                TwoLabel.Hidden = false;
+            }
+            if (ViewController.max >= 3)
+            {
+                ShooterTextBox3.Enabled = true;
+                RB3.Hidden = false;
+                ThreeLabel.Hidden = false;
+            }
+            if (ViewController.max >= 4)
+            {
+                ShooterTextBox4.Enabled = true;
+                RB4.Hidden = false;
+                FourLabel.Hidden = false;
+            }
+            if (ViewController.max >= 5)
+            {
+                ShooterTextBox5.Enabled = true;
+                RB5.Hidden = false;
+                FiveLabel.Hidden = false;
+            }
+
         }
 
         public SNameController(IntPtr handle) : base(handle)
@@ -115,6 +154,26 @@ namespace AR.TrapScorecard
             else
                 ViewController.shooters[0].Name = "Shooter 1";
 
+        }
+
+        partial void ContinueButton_TouchUpInside(UIButton sender)
+        {
+            NavigationController.PopViewController(true);
+        }
+
+        partial void AddButton_TouchUpInside(UIButton sender)
+        {
+            int max = ViewController.max;
+            ViewController.max = ViewController.max + 1;
+            Shooter[] shot = new Shooter[max+1];
+            for(int a = 0; a < max; a++)
+            {
+                shot[a] = ViewController.shooters[a];
+            }
+            shot[max] = new Shooter("Shooter " + (max+1));
+
+            ViewController.shooters = shot;
+            Update();
         }
     }
 }

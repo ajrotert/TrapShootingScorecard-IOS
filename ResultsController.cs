@@ -17,9 +17,11 @@ namespace AR.TrapScorecard
             ShooterScoresLabel.Text = "";
             max = ViewController.max;
             shooters = ViewController.shooters;
+            //Eventually this will need to store the total score in a database
             for (int a = 0; a<max;a++)
             {
                 ShooterScoresLabel.Text += shooters[a].Name + "\t" + shooters[a].GetTotal().ToString()+Environment.NewLine;
+                DatabaseManagement.Add(shooters[a].Name, shooters[a].GetTotal(), DateTime.Now);
             }
             FillLabel();
         }
@@ -627,5 +629,11 @@ namespace AR.TrapScorecard
 
             }
         }
+
+        partial void RestartButton_TouchUpInside(UIButton sender)
+        {
+            NavigationController.PopViewController(true);
+        }
     }
 }
+
