@@ -18,7 +18,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
+    <CodesignKey>Apple Development: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
@@ -36,7 +36,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile></DocumentationFile>
-    <CodesignKey>iPhone Distribution: Andrew Rotert (N9WD753NH2)</CodesignKey>
+    <CodesignKey>Apple Development: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -44,7 +44,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
     <CodesignExtraArgs></CodesignExtraArgs>
-    <CodesignProvision>TrapScorecardProfile</CodesignProvision>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
     <ExternalConsole>false</ExternalConsole>
     <MtouchDebug></MtouchDebug>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
@@ -55,7 +55,7 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
+    <CodesignKey>Apple Development: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
@@ -71,7 +71,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
+    <CodesignKey>Apple Development: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -105,6 +105,11 @@
     <Reference Include="SQLite-net">
       <HintPath>..\packages\sqlite-net-pcl.1.6.292\lib\netstandard1.1\SQLite-net.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\packages\Xamarin.Essentials.1.5.3.2\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="System.Drawing.Common.dll" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -155,6 +160,7 @@
     <Compile Include="TableContorller.designer.cs">
       <DependentUpon>TableContorller.cs</DependentUpon>
     </Compile>
+    <Compile Include="CSVFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\RedBoxTSS.png" />

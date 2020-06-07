@@ -634,6 +634,17 @@ namespace AR.TrapScorecard
         {
             NavigationController.PopViewController(true);
         }
+
+        private void DoCSV()
+        {
+            CSVFile csv = new CSVFile(shooters);
+            csv.getCSV();
+        }
+
+        partial void SendResultsButton_TouchUpInside(UIButton sender)
+        {
+            DoCSV();
+        }
     }
 }
 

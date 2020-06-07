@@ -428,6 +428,10 @@ namespace AR.TrapScorecard
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton SendResultsButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel Shooter1Label { get; set; }
 
         [Outlet]
@@ -553,6 +557,10 @@ namespace AR.TrapScorecard
         [Action ("RestartButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void RestartButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("SendResultsButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void SendResultsButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -1069,6 +1077,11 @@ namespace AR.TrapScorecard
             if (ResultsControllerName != null) {
                 ResultsControllerName.Dispose ();
                 ResultsControllerName = null;
+            }
+
+            if (SendResultsButton != null) {
+                SendResultsButton.Dispose ();
+                SendResultsButton = null;
             }
 
             if (Shooter1Label != null) {

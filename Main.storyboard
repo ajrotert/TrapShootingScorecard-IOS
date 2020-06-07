@@ -133,19 +133,21 @@
                                     <constraint firstAttribute="height" constant="30" id="4103"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="Start_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2282"/>
                                     <segue destination="5123" kind="show" identifier="SegueToNames" id="5225"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2273">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2273" enabled="NO">
                                 <rect key="frame" x="207.5" y="110" width="173.5" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4118"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
                                 <state key="normal" title="Pause"/>
                                 <state key="disabled" title="Pause"/>
                                 <connections>
@@ -443,6 +445,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="82" id="49331"/>
                                 </constraints>
+                                <size key="titleShadowOffset" width="1" height="0"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
                                     <action selector="ContinueButton_TouchUpInside:" destination="5123" eventType="touchUpInside" id="49332"/>
@@ -453,6 +456,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="82" id="59304"/>
                                 </constraints>
+                                <size key="titleShadowOffset" width="1" height="0"/>
                                 <state key="normal" title="Add Person"/>
                                 <connections>
                                     <action selector="AddButton_TouchUpInside:" destination="5123" eventType="touchUpInside" id="59308"/>
@@ -1494,9 +1498,29 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="57087"/>
                                 </constraints>
+                                <size key="titleShadowOffset" width="1" height="0"/>
                                 <state key="normal" title="Restart"/>
                                 <connections>
                                     <action selector="RestartButton_TouchUpInside:" destination="15464" eventType="touchUpInside" id="57088"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="84399" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="603" width="374" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24" weight="heavy"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" colorSpace="custom" customColorSpace="sRGB" red="1" green="0.584313725490196" blue="0" alpha="1"/>
+                                <state key="normal" title="Email Results">
+                                    <color key="titleColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="1" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="84400" firstAttribute="height" constant="47"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SendResultsButton_TouchUpInside:" destination="15464" id="100216" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1768,6 +1792,9 @@
                             <constraint firstItem="29746" firstAttribute="top" secondItem="29739" secondAttribute="bottom" constant="1" id="29751"/>
                             <constraint firstItem="57084" firstAttribute="trailing" secondItem="15465" secondAttribute="trailingMargin" id="57085"/>
                             <constraint firstItem="15462" firstAttribute="top" secondItem="57084" secondAttribute="bottom" constant="11" id="57086"/>
+                            <constraint id="84401" firstItem="84399" firstAttribute="leading" secondItem="15465" secondAttribute="leadingMargin"/>
+                            <constraint id="84402" firstItem="84399" firstAttribute="trailing" secondItem="15465" secondAttribute="trailingMargin"/>
+                            <constraint id="84403" firstItem="84399" firstAttribute="top" secondItem="29746" secondAttribute="bottom" constant="19"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1905,6 +1932,7 @@
                         <outlet property="x5y3" destination="22180" id="name-outlet-22180"/>
                         <outlet property="x5y4" destination="24311" id="name-outlet-24311"/>
                         <outlet property="x5y5" destination="24316" id="name-outlet-24316"/>
+                        <outlet property="SendResultsButton" destination="84399" id="name-outlet-84399"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15466" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2328,14 +2356,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52701">
-                                <rect key="frame" x="348" y="695" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="52704"/>
-                                </constraints>
+                                <rect key="frame" x="348" y="686" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17" weight="heavy"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="BackButton_TouchUpInside:" destination="42418" eventType="touchUpInside" id="52705"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="86562" firstAttribute="height" constant="30"/>
+                                    <constraint id="86568" firstAttribute="width" constant="46"/>
+                                </constraints>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61960784313725492" green="0.62352941176470589" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
@@ -2413,8 +2444,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="42795" secondAttribute="trailing" constant="9" id="42799"/>
                             <constraint firstItem="42801" firstAttribute="centerY" secondItem="42558" secondAttribute="centerY" constant="4" id="42804"/>
                             <constraint firstAttribute="trailingMargin" secondItem="42801" secondAttribute="trailing" constant="9" id="42805"/>
-                            <constraint firstAttribute="bottom" secondItem="52701" secondAttribute="bottom" constant="11" id="52703"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="52701" secondAttribute="trailing" id="54895"/>
+                            <constraint id="86550" firstAttribute="bottom" secondItem="52701" secondAttribute="bottom" constant="20"/>
+                            <constraint id="86556" firstItem="52701" firstAttribute="trailing" secondItem="42419" secondAttribute="trailingMargin"/>
                         </constraints>
                     </view>
                     <connections>
