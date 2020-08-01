@@ -13,3 +13,9 @@ Growing up shooting trap I noticed that scoring was often done with pen and pape
 
 # Tech
 Built using Object-Oriented Design and C#.
+
+
+# Preview
+Trap Shooting Scorecard                 |  iOS App
+:-------------------------:|:-------------------------:
+![alt text 1](https://github.com/ajrotert/TrapShootingScorecard-IOS/blob/master/TrapShootingScorecard.gif?raw=true)  |   iPhone Only
