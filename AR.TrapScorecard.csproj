@@ -91,25 +91,37 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="SQLitePCLRaw.core">
-      <HintPath>..\packages\SQLitePCLRaw.core.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.core.2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.provider.sqlite3">
-      <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.batteries_green">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.14\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.batteries_v2">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.13\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.4\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
     </Reference>
     <Reference Include="SQLite-net">
-      <HintPath>..\packages\sqlite-net-pcl.1.6.292\lib\netstandard1.1\SQLite-net.dll</HintPath>
+      <HintPath>..\packages\sqlite-net-pcl.1.7.335\lib\netstandard2.0\SQLite-net.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Essentials">
-      <HintPath>..\packages\Xamarin.Essentials.1.5.3.2\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Essentials.1.6.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK-1.0" />
-    <Reference Include="System.Drawing.Common.dll" />
+    <Reference Include="System.Buffers">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl">
+      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.nativelibrary">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.4\lib\Xamarin.iOS10\SQLitePCLRaw.nativelibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -122,12 +134,88 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\TrapIcon120x120.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\TrapIcon180x180.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\TrapIcon1024x1024.png" />
+    <ImageAsset Include="Assets.xcassets\DevLoadingLogo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\DevLoadingLogo.imageset\DevLoadingLogo.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIcon.imageset\TrapShooterIcon%401x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIcon.imageset\TrapShooterIcon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIcon.imageset\TrapShooterIcon%403x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapRoundIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrapRoundIcon.imageset\TrapRoundIcon%401x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapRoundIcon.imageset\TrapRoundIcon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapRoundIcon.imageset\TrapRoundIcon%4075x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapResultsIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrapResultsIcon.imageset\TrapResultsIcon%401x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapResultsIcon.imageset\TrapResultsIcon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapResultsIcon.imageset\TrapResultsIcon%403x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapLayout.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrapLayout.imageset\TrapLayout-1.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIconFlipped.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIconFlipped.imageset\TrapShooterIconFlipped%401x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIconFlipped.imageset\TrapShooterIconFlipped%403x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIconFlipped.imageset\TrapShooterIconFlipped%402x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIconAway.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIconAway.imageset\TrapShooterIconAway%402x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIconAway.imageset\TrapShooterIconAway%403x.png" />
+    <ImageAsset Include="Assets.xcassets\TrapShooterIconAway.imageset\TrapShooterIconAway%401x.png" />
+    <ImageAsset Include="Assets.xcassets\HitClay.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\MissClay.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HitClay.imageset\HitClay%402x-1.png" />
+    <ImageAsset Include="Assets.xcassets\HitClay.imageset\HitClay%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\HitClay.imageset\HitClay%401x.png" />
+    <ImageAsset Include="Assets.xcassets\NoClay.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\NoClay.imageset\NoClay%401x.png" />
+    <ImageAsset Include="Assets.xcassets\NoClay.imageset\NoClay%402x.png" />
+    <ImageAsset Include="Assets.xcassets\NoClay.imageset\NoClay%403x.png" />
+    <ImageAsset Include="Assets.xcassets\dropdown.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\dropup.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\dropup.imageset\dropup.png" />
+    <ImageAsset Include="Assets.xcassets\dropdown.imageset\dropdown.png" />
+    <ImageAsset Include="Assets.xcassets\MissClay.imageset\MissClay%401x.png" />
+    <ImageAsset Include="Assets.xcassets\MissClay.imageset\MissClay%403x.png" />
+    <ImageAsset Include="Assets.xcassets\MissClay.imageset\MissClay%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\DataModels\" />
+    <Folder Include="Data\Managers\" />
+    <Folder Include="Factory\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\TrapShooter\" />
+    <Folder Include="Models\TrapResults\" />
+    <Folder Include="Models\TrapRound\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Components\" />
+    <Folder Include="Components\Constants\" />
+    <Folder Include="Components\Extensions\" />
+    <Folder Include="ViewControllers\" />
+    <Folder Include="Assets.xcassets\DevLoadingLogo.imageset\" />
+    <Folder Include="Assets.xcassets\TrapShooterIcon.imageset\" />
+    <Folder Include="Assets.xcassets\TrapRoundIcon.imageset\" />
+    <Folder Include="Assets.xcassets\TrapResultsIcon.imageset\" />
+    <Folder Include="ViewControllers\TrapShooters\" />
+    <Folder Include="ViewCells\" />
+    <Folder Include="ViewCells\TrapShooters\" />
+    <Folder Include="Assets.xcassets\TrapLayout.imageset\" />
+    <Folder Include="Assets.xcassets\TrapShooterIconFlipped.imageset\" />
+    <Folder Include="Assets.xcassets\TrapShooterIconAway.imageset\" />
+    <Folder Include="ViewControllers\TrapRound\" />
+    <Folder Include="ViewCells\TrapRound\" />
+    <Folder Include="Assets.xcassets\HitClay.imageset\" />
+    <Folder Include="Assets.xcassets\MissClay.imageset\" />
+    <Folder Include="Assets.xcassets\NoClay.imageset\" />
+    <Folder Include="ViewControllers\TrapResults\" />
+    <Folder Include="ViewCells\TrapResults\" />
+    <Folder Include="ViewCells\Shared\" />
+    <Folder Include="Assets.xcassets\dropdown.imageset\" />
+    <Folder Include="Assets.xcassets\dropup.imageset\" />
+    <Folder Include="ViewControllers\TrapModifyScores\" />
+    <Folder Include="ViewCells\TrapModifyScores\" />
+    <Folder Include="ViewControllers\PastTrapResults\" />
+    <Folder Include="ViewCells\PastTrapResults\" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
@@ -138,37 +226,43 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Shooter.cs" />
-    <Compile Include="SNameController.cs" />
-    <Compile Include="SNameController.designer.cs">
-      <DependentUpon>SNameController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ResultsController.cs" />
-    <Compile Include="ResultsController.designer.cs">
-      <DependentUpon>ResultsController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ChangeScoreController.cs" />
-    <Compile Include="ChangeScoreController.designer.cs">
-      <DependentUpon>ChangeScoreController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Data.cs" />
-    <Compile Include="TableContorller.cs" />
-    <Compile Include="TableContorller.designer.cs">
-      <DependentUpon>TableContorller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CSVFile.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\RedBoxTSS.png" />
-    <BundleResource Include="Resources\TrapDesignMap.png" />
-    <BundleResource Include="Resources\MissClay.png" />
-    <BundleResource Include="Resources\HitClay.png" />
-    <BundleResource Include="Resources\Blank.png" />
-    <BundleResource Include="Resources\LoadingLogo6.png" />
+    <Compile Include="Data\DataModels\TrapResult.cs" />
+    <Compile Include="Data\Managers\TrapResultsDataManager.cs" />
+    <Compile Include="Factory\Factory.cs" />
+    <Compile Include="Models\TrapShooter\TrapShooter.cs" />
+    <Compile Include="Models\TrapRound\TrapRound.cs" />
+    <Compile Include="Models\TrapResults\TrapResults.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\CSVHelper.cs" />
+    <Compile Include="Components\Extensions\UIColor+Hex.cs" />
+    <Compile Include="Components\Constants\DataConstants.cs" />
+    <Compile Include="Components\Constants\ColorConstants.cs" />
+    <Compile Include="ViewControllers\TrapShooters\TrapShooterNamesViewController.cs" />
+    <Compile Include="ViewCells\TrapShooters\InputTrapShooterNameViewCell.cs" />
+    <Compile Include="ViewCells\TrapShooters\TrapLayoutViewCell.cs" />
+    <Compile Include="ViewCells\TrapShooters\InputNumberOfShootersViewCell.cs" />
+    <Compile Include="ViewControllers\TrapRound\TrapRoundViewController.cs" />
+    <Compile Include="ViewCells\TrapRound\TrapLayoutViewCell.cs" />
+    <Compile Include="ViewCells\TrapRound\TrapShotsViewCell.cs" />
+    <Compile Include="ViewCells\TrapRound\TrapButtonViewCell.cs" />
+    <Compile Include="ViewControllers\TrapResults\TrapResultsViewController.cs" />
+    <Compile Include="ViewCells\TrapResults\TrapResultsViewCell.cs" />
+    <Compile Include="ViewCells\TrapResults\PastResultsViewCell.cs" />
+    <Compile Include="Helpers\DataHelper.cs" />
+    <Compile Include="Models\TrapResults\PastResults.cs" />
+    <Compile Include="ViewCells\Shared\LabelViewCell.cs" />
+    <Compile Include="ViewCells\Shared\ButtonViewCell.cs" />
+    <Compile Include="ViewCells\TrapRound\TrapShotsExpandedViewCell.cs" />
+    <Compile Include="ViewControllers\TrapModifyScores\TrapModifyScoresViewController.cs" />
+    <Compile Include="ViewCells\TrapModifyScores\TrapModifyScoresViewCell.cs" />
+    <Compile Include="ViewControllers\BaseViewController.cs" />
+    <Compile Include="Components\Constants\SizeConstants.cs" />
+    <Compile Include="Data\DataModels\TrapRound.cs" />
+    <Compile Include="Data\Managers\TrapRoundDataManager.cs" />
+    <Compile Include="ViewControllers\PastTrapResults\PastTrapResultsViewController.cs" />
+    <Compile Include="Models\TrapResults\PastTrapRound.cs" />
+    <Compile Include="ViewControllers\BaseModalViewController.cs" />
+    <Compile Include="ViewCells\PastTrapResults\PastTrapRoundViewCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork%402x" />

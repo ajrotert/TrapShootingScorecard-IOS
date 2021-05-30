@@ -1,4 +1,6 @@
-﻿using Foundation;
+﻿using AR.TrapScorecard.Components.Constants;
+using AR.TrapScorecard.ViewControllers.TrapShooters;
+using Foundation;
 using UIKit;
 
 namespace AR.TrapScorecard
@@ -20,6 +22,15 @@ namespace AR.TrapScorecard
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+
+            UINavigationBar.Appearance.BarTintColor = ColorConstants.PrimaryColor;
+            UITextField.Appearance.TintColor = ColorConstants.PrimaryColor;
+            Window = new UIWindow(UIScreen.MainScreen.Bounds);
+            Window.MakeKeyAndVisible();
+
+            var navigationController = new UINavigationController(new TrapShooterNamesViewController());
+
+            Window.RootViewController = navigationController;
 
             return true;
         }
