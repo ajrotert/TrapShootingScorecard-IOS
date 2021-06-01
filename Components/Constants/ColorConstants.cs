@@ -15,10 +15,10 @@ namespace AR.TrapScorecard.Components.Constants
         private static UIColor _TextColor;
         public static UIColor TextColor { get { if (_TextColor == null) _TextColor = UIColor.Clear.FromHex("#383838"); return _TextColor; } }
 
-        private static UIColor _HitColor;
-        public static UIColor HitColor { get { if (_HitColor == null) _HitColor = UIColor.Clear.FromHex("#009900"); return _HitColor; } }
+        private static UIColor _GreenColor;
+        public static UIColor GreenColor { get { if (_GreenColor == null) _GreenColor = UIColor.Clear.FromHex("#009900"); return _GreenColor; } }
 
-        private static UIColor _LossColor;
-        public static UIColor LossColor { get { if (_LossColor == null) _LossColor = UIColor.Clear.FromHex("#990000"); return _LossColor; } }
+        private static UIColor _RedColor;
+        public static UIColor RedColor { get { if (_RedColor == null) _RedColor = UIColor.Clear.FromHex("#990000"); return _RedColor; } }
     }
 }

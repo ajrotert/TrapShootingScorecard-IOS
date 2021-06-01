@@ -28,7 +28,7 @@ namespace AR.TrapScorecard.ViewCells.Shared
         #endregion
 
         #region - public methods
-        public void SetupLabelViewCell(string text)
+        public void SetupLabelViewCell(string text = null, NSAttributedString attributedText = null)
         {
             if (LabelText == null)
                 LabelText = new UILabel(new CGRect(0f, 0f, this.Frame.Width, this.Frame.Height));
@@ -36,9 +36,17 @@ namespace AR.TrapScorecard.ViewCells.Shared
             LabelText.Lines = 1;
             LabelText.AdjustsFontSizeToFitWidth = true;
             LabelText.LineBreakMode = UILineBreakMode.Clip;
-            LabelText.Text = text;
+            if(text != null)
+            {
+                LabelText.Text = text;
+                LabelText.TextColor = ColorConstants.TextColor;
+            }
+            else if(attributedText != null)
+            {
+                LabelText.AttributedText = attributedText;
+            }
+
             LabelText.TextAlignment = UITextAlignment.Center;
-            LabelText.TextColor = ColorConstants.TextColor;
             LabelText.ContentMode = UIViewContentMode.Bottom;
 
             this.ContentView.AddSubview(LabelText);

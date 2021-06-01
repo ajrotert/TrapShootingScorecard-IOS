@@ -10,10 +10,11 @@ using UIKit;
 
 namespace AR.TrapScorecard.ViewControllers.TrapModifyScores
 {
-    public class TrapModifyScoresViewController : BaseModalViewController
+    public class TrapModifyScoresViewController : UIViewController
     {
         #region - variables
         private IScoreModifiedDelegate Delegate;
+        private UICollectionView CollectionView { get; set; }
         private List<TrapShooter> TrapShooters { get; set; }
 
         #endregion
@@ -50,15 +51,40 @@ namespace AR.TrapScorecard.ViewControllers.TrapModifyScores
         #region - private methods
         private void SetupTrapModifyScoresViewController()
         {
-            SetupBaseModalViewController();
             var layout = new UICollectionViewFlowLayout();
+            layout.ItemSize = new CGSize(this.View.Frame.Width - 20, 40);
+            layout.ScrollDirection = UICollectionViewScrollDirection.Vertical;
+            layout.SectionInset = new UIEdgeInsets(0f, 0f, 10f, 0f);
 
+            this.CollectionView = new UICollectionView(new CGRect(0f, 40f, this.View.Frame.Width, this.View.Frame.Height-40), layout);
             this.CollectionView.Delegate = new TrapShooterLayoutDelegate();
+            this.CollectionView.BackgroundColor = ColorConstants.BackgroundColor;
+            this.CollectionView.ContentInset = new UIEdgeInsets(20, 10, 0, 10);
 
             CollectionView.RegisterClassForCell(typeof(TrapModifyScoresViewCell), TrapModifyScoresViewCell.Key);
             CollectionView.RegisterClassForCell(typeof(LabelViewCell), LabelViewCell.Key);
 
             this.CollectionView.DataSource = new TrapModifyScoresDataSource(this.TrapShooters, this.Delegate);
+
+            UIView view = new UIView(new CGRect(0f, 0f, this.View.Frame.Width, 40f));
+            view.BackgroundColor = ColorConstants.PrimaryColor;
+
+            UIButton button = new UIButton(new CGRect(0f, 0f, 40f, 40f));
+            button.SetTitle("X", UIControlState.Normal);
+            button.TitleLabel.Font = UIFont.PreferredTitle1;
+            button.TitleLabel.LineBreakMode = UILineBreakMode.Clip;
+            button.TitleLabel.Lines = 1;
+            button.TitleLabel.AdjustsFontSizeToFitWidth = true;
+            button.SetTitleColor(ColorConstants.BackgroundColor, UIControlState.Normal);
+            button.TouchUpInside += (o, e) =>
+            {
+                this.DismissModalViewController(true);
+            };
+
+            view.AddSubview(button);
+
+            this.View.AddSubview(view);
+            this.View.AddSubview(this.CollectionView);
         }
         #endregion
 
@@ -109,7 +135,7 @@ namespace AR.TrapScorecard.ViewControllers.TrapModifyScores
         {
             switch (section)
             {
-                case 0: return 1; //Header
+                case 0: return 2; //Header
                 case 1: default: return this.TotalShooters; //Shooter Names
             }
         }
@@ -119,9 +145,25 @@ namespace AR.TrapScorecard.ViewControllers.TrapModifyScores
             switch (indexPath.Section)
             {
                 case 0:
-                    var trapLabel = (LabelViewCell)collectionView.DequeueReusableCell(LabelViewCell.Key, indexPath);
-                    trapLabel.SetupLabelViewCell("Modify Scores:");
-                    return trapLabel;
+                    if(indexPath.Row == 0)
+                    {
+                        var trapLabel = (LabelViewCell)collectionView.DequeueReusableCell(LabelViewCell.Key, indexPath);
+                        trapLabel.SetupLabelViewCell("Modify Scores:");
+                        return trapLabel;
+                    }
+                    else
+                    {
+                        var trapLabel = (LabelViewCell)collectionView.DequeueReusableCell(LabelViewCell.Key, indexPath);
+
+                        var atts = new UIStringAttributes();
+                        atts.Font = UIFont.PreferredCaption1;
+                        atts.ForegroundColor = ColorConstants.RedColor;
+
+                        NSAttributedString attributedString = new NSAttributedString("(Tap to toggle shots)", atts);
+
+                        trapLabel.SetupLabelViewCell(attributedText: attributedString);
+                        return trapLabel;
+                    }
                 case 1: default:
                     var trapResults = (TrapModifyScoresViewCell)collectionView.DequeueReusableCell(TrapModifyScoresViewCell.Key, indexPath);
                     trapResults.ButtonScoreClicked = (index) =>

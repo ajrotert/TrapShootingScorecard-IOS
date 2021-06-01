@@ -243,11 +243,11 @@ namespace AR.TrapScorecard.ViewControllers.TrapRound
                     {
                         if (this.Delegate != null) this.Delegate.ShooterShot(true);
                     };
-                    trapButtonHit.SetupTrapButtonViewCell(ColorConstants.HitColor, "Hit");
+                    trapButtonHit.SetupTrapButtonViewCell(ColorConstants.GreenColor, "Hit");
                     return trapButtonHit;
                 case 4:
                     var trapButtonLoss = (TrapButtonViewCell)collectionView.DequeueReusableCell(TrapButtonViewCell.Key, indexPath);
-                    trapButtonLoss.SetupTrapButtonViewCell(ColorConstants.LossColor, "Loss");
+                    trapButtonLoss.SetupTrapButtonViewCell(ColorConstants.RedColor, "Loss");
                     trapButtonLoss.ButtonClicked = () =>
                     {
                         if (this.Delegate != null) this.Delegate.ShooterShot(false);

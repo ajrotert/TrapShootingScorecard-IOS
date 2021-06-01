@@ -76,7 +76,7 @@ namespace AR.TrapScorecard.ViewCells.TrapResults
                 ButtonRound = new UIButton(new CGRect(this.Frame.Width + 10, 0f, 120f, this.Frame.Height));
             ButtonRound.ImageEdgeInsets = new UIEdgeInsets(0, 0, 0, 0);
             ButtonRound.ContentEdgeInsets = new UIEdgeInsets(0, 0, 0, 0);
-            ButtonRound.BackgroundColor = ColorConstants.HitColor;
+            ButtonRound.BackgroundColor = ColorConstants.GreenColor;
             ButtonRound.SetTitle("View Round", UIControlState.Normal);
             ButtonRound.SetTitleColor(ColorConstants.BackgroundColor, UIControlState.Normal);
             ButtonRound.TouchUpInside += ButtonViewRound_Clicked;
@@ -86,7 +86,7 @@ namespace AR.TrapScorecard.ViewCells.TrapResults
             ButtonDelete.Frame = new CGRect(this.Frame.Width + (hasRound ? 140 : 10), 0f, 120f, this.Frame.Height);
             ButtonDelete.ImageEdgeInsets = new UIEdgeInsets(0, 0, 0, 0);
             ButtonDelete.ContentEdgeInsets = new UIEdgeInsets(0, 0, 0, 0);
-            ButtonDelete.BackgroundColor = ColorConstants.LossColor;
+            ButtonDelete.BackgroundColor = ColorConstants.RedColor;
             ButtonDelete.SetTitle("Delete", UIControlState.Normal);
             ButtonDelete.SetTitleColor(ColorConstants.BackgroundColor, UIControlState.Normal);
             ButtonDelete.TouchUpInside += ButtonDelete_TouchUpInside;
