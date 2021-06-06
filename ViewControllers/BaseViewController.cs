@@ -146,7 +146,7 @@ namespace AR.TrapScorecard.ViewControllers
 
             this.ToggleButtons(this.ButtonTabs[Tab]);
 
-            this.OverrideUserInterfaceStyle = UIUserInterfaceStyle.Light;
+            if(UIDevice.CurrentDevice.CheckSystemVersion(13, 0)) this.OverrideUserInterfaceStyle = UIUserInterfaceStyle.Light;
 
             base.NavigationItem.TitleView = StackViewTitleButtons;
         }
